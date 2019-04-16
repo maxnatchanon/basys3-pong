@@ -1,0 +1,9 @@
+0.6
+2018.3
+Dec  6 2018
+23:39:36
+/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.sim/sim_1/behav/xsim/glbl.v,1544155481,verilog,,,,glbl,,,,,,,,
+/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sim_1/new/alu_test.v,1555236035,verilog,,,,alu_test,,,,,,,,
+/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sim_1/new/register_test.v,1555428418,verilog,,,,register_test,,,,,,,,
+/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/alu.v,1555414311,verilog,,/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sim_1/new/alu_test.v,,alu,,,,,,,,
+/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/register.v,1555414345,verilog,,/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sim_1/new/register_test.v,,register,,,,,,,,
