@@ -6,8 +6,8 @@
 //-------------------------------------------------------
 
 module register(
-    output reg [7:0] regA,
-    output reg [7:0] regB,
+    output wire [7:0] regA,
+    output wire [7:0] regB,
     input wire [4:0] addrA,
     input wire [4:0] addrB,
     input wire wr,
@@ -24,11 +24,10 @@ initial begin
     end
 end
 
-always @(posedge clk) 
-begin
-    regA = mem[addrA];
-    regB = mem[addrB];
+
+   assign regA = mem[addrA];
+   assign regB = mem[addrB];
+   always @(posedge clk) 
     if (wr) mem[addrA] = din;
-end
 
 endmodule
