@@ -12,8 +12,8 @@ module alu(
     input wire [7:0] B,
     input wire Cin,
     input wire alu_op         // 0 - Add, 1 - Sub
-);
+    );
 
-assign {Cout,S} = (alu_op == 0) ? A + B + Cin : A - B;
+    assign {Cout,S} = (alu_op == 0) ? A + B + Cin : A - B;
 
 endmodule

@@ -8,13 +8,13 @@
 module rom(
     input wire [9:0] address,
     input wire [32:0] data
-);
+    );
 
-reg	[31:0] mem [(1<<10)-1:0];
-assign data = mem[address];
+    reg	[31:0] mem [(1<<10)-1:0];
+    assign data = mem[address];
 
-initial begin
-    $readmemb("prog.list",mem);
-end
+    initial begin
+        $readmemb("prog.list",mem);
+    end
 
 endmodule

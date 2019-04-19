@@ -13,21 +13,21 @@ module register(
     input wire wr,
     input wire [7:0] din,
     input wire clk
-);
+    );
 
-reg [7:0] mem [31:0];
+    reg [7:0] mem [31:0];
 
-integer i;
-initial begin
-    for (i=0;i<32;i=i+1) begin
-        mem[i] = 0;
+    integer i;
+    initial begin
+        for (i=0;i<32;i=i+1) begin
+            mem[i] = 0;
+        end
     end
-end
 
 
-   assign regA = mem[addrA];
-   assign regB = mem[addrB];
-   always @(posedge clk) 
-    if (wr) mem[addrA] = din;
+    assign regA = mem[addrA];
+    assign regB = mem[addrB];
+    always @(posedge clk) 
+        if (wr) mem[addrA] = din;
 
 endmodule

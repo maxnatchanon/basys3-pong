@@ -15,26 +15,26 @@ module mem_io(
     input wire ps2_data,        // Keyboard data
     input wire ps2_clk,         // Keyboard clock
     input wire clk              // Clock
-);
+    );
 
-parameter ADDRESS_WIDTH = 10;
-parameter DATA_WIDTH = 8;
+    parameter ADDRESS_WIDTH = 10;
+    parameter DATA_WIDTH = 8;
 
-reg [DATA_WIDTH-1:0] mem [(1<<ADDRESS_WIDTH)-1:0];
+    reg [DATA_WIDTH-1:0] mem [(1<<ADDRESS_WIDTH)-1:0];
 
-reg [DATA_WIDTH-1:0] data_out;
-assign data = (wr == 0) ? data_out : 10'bz;
+    reg [DATA_WIDTH-1:0] data_out;
+    assign data = (wr == 0) ? data_out : 10'bz;
 
-always @(address)
-begin
-	data_out = mem[address];
-end
+    always @(address)
+    begin
+        data_out = mem[address];
+    end
 
-always @(posedge clk)
-begin
-	if (wr == 1) begin
-		mem[address] = data;
-	end
-end
+    always @(posedge clk)
+    begin
+        if (wr == 1) begin
+            mem[address] = data;
+        end
+    end
 
 endmodule

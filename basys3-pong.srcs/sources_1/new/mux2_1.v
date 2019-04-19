@@ -10,8 +10,8 @@ module mux2_1(
     input wire [9:0] in0,
     input wire [9:0] in1,
     input wire sel
-);
+    );
 
-assign dout = (sel == 0) ? in0 : in1;
+    assign dout = (sel == 0) ? in0 : in1;
 
 endmodule
