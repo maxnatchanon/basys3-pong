@@ -12,8 +12,8 @@ Time Resolution for simulation is 1ps
 Compiling module xil_defaultlib.mux2_1
 Compiling module xil_defaultlib.rom
 Compiling module xil_defaultlib.mem_io
-Compiling module xil_defaultlib.register
 Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.register
 Compiling module xil_defaultlib.top_test
 Compiling module xil_defaultlib.glbl
 Built simulation snapshot top_test_behav

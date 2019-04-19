@@ -34,12 +34,12 @@ rom PROG_ROM(pc,p_data);
 always @(pc)
 begin
     case (pc)
-    0: p_data = 24'b001001_00001_000_0011111111; // LOAD $R1 FF
+    0: p_data = 24'b001001_00001_000_0000000111; // LOAD $R1 FF
     1: p_data = 24'b001001_00010_000_0000001111; // LOAD $R2 0F
-    2: p_data = 24'b010000_00001_000_0000000000; // STOR $R1 m[00]
-    3: p_data = 24'b010000_00010_000_0000000001; // STOR $R2 m[01]
-    4: p_data = 24'b001000_00011_000_0000000000; // LOAD $R3 m[00]
-    5: p_data = 24'b010000_00011_000_0000000010; // STOR $R3 m[02]
+    2: p_data = 24'b000100_00001_00010_00000101; // BEQ $R1 $R2 05
+    3: p_data = 24'b000101_00001_00101_00000110; // BEQI $R1 07 06
+    4: p_data = 24'b000011_00010_00001_00000001; // SUBI $R2 $R1 01
+    5: p_data = 24'b010000_00010_000_0000000010; // STOR $R2 m[02]
     endcase
 end
 
@@ -59,17 +59,18 @@ wire [7:0] mem_data;
 assign mem_data = (mem_wr == 1) ? regA : 10'bz;
 mem_io MEM_IO(seg,dp,an,mem_data,addr,mem_wr,ps2_data,ps2_clk,clk);
 
-// Register
-wire [7:0] reg_in;
-wire reg_wr;
-register REG(regA,regB,reg0,reg1,reg_wr,reg_in,clk);
-assign reg_in = (opcode == 6'b001000) ? mem_data : imm;
-
 // ALU
 wire alu_op;
 wire [7:0] S;
 wire cout, cin;
+assign cin = 0;
 alu ALU(S,cout,regB,imm,cin,alu_op);
+
+// Register
+wire [7:0] reg_in;
+wire reg_wr;
+register REG(regA,regB,reg0,reg1,reg_wr,reg_in,clk);
+assign reg_in = (opcode == 6'b001000) ? mem_data : (opcode == 6'b001001) ? imm : S;
 
 // Signal
 wire mem_mux_sel, reg_mux_sel, imm_mux_sel;
@@ -93,7 +94,7 @@ begin
     ps2_clk = 0;
     ps2_data = 0;
     nreset = 1;
-    #100 $finish;
+    #150 $finish;
 end
 
 endmodule
