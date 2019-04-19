@@ -16,12 +16,18 @@ module image_generator(
 	parameter [11:0] BLACK = 0;
 	parameter [11:0] WHITE = 4096;
 
-	reg [79:0] game_area [59:0]; 	// Store 80*25 grid game area
+	reg [79:0] game_area [59:0]; 	// Store 80*60 grid game area
+	wire p_clk;						// Pixel scan clock
 	wire [9:0] x;  					// Current pixel x position
     wire [8:0] y;  					// Current pixel y position
     wire game_color;				// Game screen pixel color
     wire start_color;				// Start screen pixel color
     wire current_color;				// Current screen pixel color
+
+	// Divide clock
+	wire tclk;
+	clockDiv(tclk,clk);
+	clockDiv(p_clk,tclk);
 
     // VGA sync
     vga_sync(hsync,vsync,x,y,clk,p_clk,nreset);
