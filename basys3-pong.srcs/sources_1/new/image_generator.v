@@ -1,3 +1,11 @@
+`timescale 1ns/1ps
+
+//-------------------------------------------------------
+// File name    : image_generator.v
+// Purpose      : 
+// Developers   : Natchanon A.
+//-------------------------------------------------------
+
 module image_generator(
 	output wire hsync,
 	output wire vsync,
@@ -23,6 +31,7 @@ module image_generator(
     wire game_color;				// Game screen pixel color
     wire start_color;				// Start screen pixel color
     wire current_color;				// Current screen pixel color
+	wire animate;					// Animate signal for image generator
 
 	// Divide clock
 	wire tclk;
@@ -30,14 +39,14 @@ module image_generator(
 	clockDiv(p_clk,tclk);
 
     // VGA sync
-    vga_sync(hsync,vsync,x,y,clk,p_clk,nreset);
+    vga_sync(hsync,vsync,animate,x,y,clk,p_clk,nreset);
 
     // Output pixel color
     assign current_color = (game_state == 1) ? game_color : start_color;
     assign rgb = (current_color) ? BLACK : WHITE;
 
 	// Generate game area image
-	game_image_generator(game_area,game_state,paddle_1,paddle_2,ball_x,ball_y);
+	game_image_generator(game_area,game_state,paddle_1,paddle_2,ball_x,ball_y,animate);
 
 	// Scale game to 640*480
 	image_scaler(game_color,game_area,x,y);
