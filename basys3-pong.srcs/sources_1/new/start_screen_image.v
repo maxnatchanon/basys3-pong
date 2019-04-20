@@ -2,7 +2,7 @@
 
 //-------------------------------------------------------
 // File name    : start_screen_image.v
-// Purpose      : 
+// Purpose      : Hw Syn Lab 2/2018
 // Developers   : Natchanon A.
 //-------------------------------------------------------
 

@@ -1,7 +1,7 @@
 `timescale 1ns/1ps
 //-------------------------------------------------------
 // File name    : alu.v
-// Purpose      : Comp Sys Arch 2/2018
+// Purpose      : Hw Syn Lab 2/2018
 // Developers   : Natchanon A.
 //-------------------------------------------------------
 

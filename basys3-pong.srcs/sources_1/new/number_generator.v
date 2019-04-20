@@ -2,7 +2,7 @@
 
 //-------------------------------------------------------
 // File name    : number_generator.v
-// Purpose      : 
+// Purpose      : Hw Syn Lab 2/2018
 // Developers   : Natchanon A.
 //-------------------------------------------------------
 
