@@ -23,7 +23,7 @@ module game_image_generator(
     // Game position - row:[15:39]
     // Player position - col:[3]&[79]
 
-    reg [79:0] game_area [59:0]
+    reg [79:0] game_area [59:0];
     reg [79:0] template [59:0];
     wire [8:0] score_pixel_1 [12:0];
     wire [8:0] score_pixel_2 [12:0];
