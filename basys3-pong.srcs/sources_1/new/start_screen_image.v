@@ -1,7 +1,7 @@
 `timescale 1ns/1ps
 
 //-------------------------------------------------------
-// File name    : image_generator.v
+// File name    : start_screen_image.v
 // Purpose      : 
 // Developers   : Natchanon A.
 //-------------------------------------------------------
