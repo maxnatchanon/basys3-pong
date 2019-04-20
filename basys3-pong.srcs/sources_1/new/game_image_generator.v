@@ -25,8 +25,9 @@ module game_image_generator(
 
     reg [79:0] game_area [59:0];
     reg [79:0] template [59:0];
-    wire [8:0] score_pixel_1 [12:0];
-    wire [8:0] score_pixel_2 [12:0];
+    wire [116:0] score_pixel_1;
+    wire [116:0] score_pixel_2;
+    integer i;
 
     initial
     begin
@@ -39,17 +40,31 @@ module game_image_generator(
     always @(posedge animate)
     begin
         // Load template
-        game_area = template;
+        for (i=0;i<60;i=i+1)
+        begin
+            game_area[i] = template[i];
+        end
         // Insert score
-        game_area[56:44][23:16] = score_pixel_1;
-        game_area[56:44][63:56] = score_pixel_2;
+        for (i=0;i<13;i=i+1)
+        begin
+            game_area[44+i][23:16] = score_pixel_1[(8*i)+8:8*i];
+            game_area[44+i][63:56] = score_pixel_2[(8*i)+8:8*i];
+        end
         // Insert ball
         game_area[ball_y+15][ball_x] = 1;
         // Insert paddle
-        game_area[paddle_1+19:paddle_1+15][3] = 1;
-        game_area[paddle_2+19:paddle_2+15][79] = 1;
+        for (i=15;i<20;i=i+1)
+        begin
+            game_area[paddle_1+i][3] = 1;
+            game_area[paddle_2+i][79] = 1;
+        end
     end
 
-    image_scaler #(8) GAME_IMG_SCALER(game_color,game_area,x,y);
+    // Return pixel color at (x,y) in scaled image
+    // Scale factor: 8
+    always @(x or y)
+    begin
+        game_color = game_area[y/8][x/8];
+    end
 
 endmodule

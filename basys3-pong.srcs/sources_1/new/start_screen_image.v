@@ -10,17 +10,13 @@ module start_screen_image(
 	output reg out,			// Output pixel value at (x,y)
 	input wire x,			// Input x position
 	input wire y,			// Input y position
-	input wire animate			// Animate signal
+	input wire animate		// Animate signal
 	);
 
 	reg [319:0] image0 [239:0];
 	reg [319:0] image1 [239:0];
 	reg state = 0;
     reg [3:0] count = 0;
-
-	wire image0_pixel, image1_pixel;
-	image_scaler #(2) IMG_SCALER0(image0_pixel,image0,x,y);
-	image_scaler #(2) IMG_SCALER1(image1_pixel,image1,x,y);
 
 	initial
 	begin
@@ -36,8 +32,8 @@ module start_screen_image(
 
 	always @(x or y)
 	begin
-		if (state == 0) out = image0_pixel;
-		else out = image1_pixel;
+		if (state == 0) out = image0[y/2][x/2];
+		else out = image1[y/2][x/2];
 	end
 
 endmodule
