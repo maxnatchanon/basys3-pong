@@ -47,8 +47,8 @@ module game_image_generator(
         // Insert score
         for (i=0;i<13;i=i+1)
         begin
-            game_area[44+i][23:16] = score_pixel_1[(8*i)+8:8*i];
-            game_area[44+i][63:56] = score_pixel_2[(8*i)+8:8*i];
+            game_area[44+i][23:16] = score_pixel_1[8*i+:9];
+            game_area[44+i][63:56] = score_pixel_2[8*i+:9];
         end
         // Insert ball
         game_area[ball_y+15][ball_x] = 1;
