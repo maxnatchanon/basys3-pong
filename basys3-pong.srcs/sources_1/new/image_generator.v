@@ -49,7 +49,7 @@ module image_generator(
 	game_image_generator GAME_IMG_GEN(game_area,paddle_1,paddle_2,ball_x,ball_y,score_1,score_2,animate);
 
 	// Scale game to 640*480
-	image_scaler GAME_IMG_SCALER(game_color,game_area,x,y);
+	image_scaler #(8) GAME_IMG_SCALER(game_color,game_area,x,y);
 
 	// Load start screen image
 	start_screen_image START_IMG_GEN(start_color,x,y,animate);
