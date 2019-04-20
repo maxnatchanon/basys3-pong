@@ -22,7 +22,7 @@ module image_generator(
 	);
 
 	parameter [11:0] BLACK = 0;
-	parameter [11:0] WHITE = 4096;
+	parameter [11:0] WHITE = 4095;
 
 	reg [79:0] game_area [59:0]; 	// Store 80*60 grid game area
 	reg p_clk;						// Pixel scan clock

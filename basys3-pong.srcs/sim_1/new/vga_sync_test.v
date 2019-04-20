@@ -27,14 +27,13 @@ module vga_sync_test();
     wire hsync, vsync, animate;
     wire [9:0] x;
     wire [8:0] y;
-    wire [9:0] hc;
     
     
     reg [15:0] cnt = 0;
     always @(posedge clk)
         {p_clk,cnt} = cnt + 16'h4000;
     
-    vga_sync VGA_SYNC(hsync,vsync,animate,x,y,clk,p_clk,nreset,hc);
+    vga_sync VGA_SYNC(hsync,vsync,animate,x,y,clk,p_clk,nreset);
     
     always #1 clk = ~clk;
     

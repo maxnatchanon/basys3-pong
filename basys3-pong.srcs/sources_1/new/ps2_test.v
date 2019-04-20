@@ -1,6 +1,6 @@
 `timescale 1ns/1ps
 //-------------------------------------------------------
-// File name    : mux2_1.v
+// File name    : ps2_test.v
 // Purpose      : Hw Syn Lab 2/2018
 // Developers   : Natchanon A.
 //-------------------------------------------------------
@@ -9,6 +9,9 @@ module ps2_test(
     output wire [6:0] seg,             // 7-Seg number display
     output wire dp,                    // 7-Seg dot display
     output wire [3:0] an,              // 7-Seg selector
+    output wire [11:0] rgb,            // VGA color
+    output wire hsync,                 // H-sync signal
+    output wire vsync,                 // V-sync sugnal
     input wire ps2_data,               // Keyboard data
     input wire ps2_clk,                // Keyboard clock
     input wire clk,                    // Clock
