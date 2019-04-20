@@ -10,26 +10,28 @@ module start_screen_image(
 	output reg out,			// Output pixel value at (x,y)
 	input wire x,			// Input x position
 	input wire y,			// Input y position
-	input animate			// Animate signal
+	input wire animate			// Animate signal
 	);
 
 	reg [319:0] image0 [239:0];
 	reg [319:0] image1 [239:0];
 	reg state = 0;
+    reg [3:0] count = 0;
 
 	wire image0_pixel, image1_pixel;
-	image_scaler #(2) IMG_SCALER(image0_pixel,image0,x,y);
-	image_scaler #(2) IMG_SCALER(image1_pixel,image1,x,y);
+	image_scaler #(2) IMG_SCALER0(image0_pixel,image0,x,y);
+	image_scaler #(2) IMG_SCALER1(image1_pixel,image1,x,y);
 
 	initial
 	begin
-		$readmemb();
-		$readmemb();
+		$readmemb("startImg0.mem",image0);
+		$readmemb("startImg1.mem",image1);
 	end
 
 	always @(posedge animate)
 	begin
-		state = ~state;
+		count = count + 1;
+        if (count == 0) state = ~state;
 	end
 
 	always @(x or y)

@@ -35,23 +35,23 @@ module image_generator(
 
 	// Divide clock
 	wire tclk;
-	clockDiv(tclk,clk);
-	clockDiv(p_clk,tclk);
+	clockDiv CD1(tclk,clk);
+	clockDiv CD2(p_clk,tclk);
 
     // VGA sync
-    vga_sync(hsync,vsync,animate,x,y,clk,p_clk,nreset);
+    vga_sync VGA_SYNC(hsync,vsync,animate,x,y,clk,p_clk,nreset);
 
     // Output pixel color
     assign current_color = (game_state == 1) ? game_color : start_color;
     assign rgb = (current_color) ? BLACK : WHITE;
 
 	// Generate game area image
-	game_image_generator(game_area,game_state,paddle_1,paddle_2,ball_x,ball_y,animate);
+	game_image_generator GAME_IMG_GEN(game_area,game_state,paddle_1,paddle_2,ball_x,ball_y,animate);
 
 	// Scale game to 640*480
-	image_scaler(game_color,game_area,x,y);
+	image_scaler GAME_IMG_SCALER(game_color,game_area,x,y);
 
 	// Load start screen image
-	start_screen_image(start_color,x,y);
+	start_screen_image START_IMG_GEN(start_color,x,y,animate);
 
 endmodule
