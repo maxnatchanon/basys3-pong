@@ -7,20 +7,23 @@
 //-------------------------------------------------------
 
 module game_image_generator(
-    output reg [79:0] game_area [59:0],
+    output reg game_color,
     input wire [4:0] paddle_1,
 	input wire [4:0] paddle_2,
 	input wire [6:0] ball_x,
 	input wire [4:0] ball_y,
 	input wire [2:0] score_1,
 	input wire [2:0] score_2,
-    input wire animate
+    input wire animate,
+    input wire [9:0] x,
+    input wire [8:0] y
     );
 
     // Score position - row:[44:56] col:[16:23]&[56:63]
     // Game position - row:[15:39]
     // Player position - col:[3]&[79]
 
+    reg [79:0] game_area [59:0]
     reg [79:0] template [59:0];
     wire [8:0] score_pixel_1 [12:0];
     wire [8:0] score_pixel_2 [12:0];
@@ -47,4 +50,6 @@ module game_image_generator(
         game_area[paddle_2+19:paddle_2+15][79] = 1;
     end
 
-module
+    image_scaler #(8) GAME_IMG_SCALER(game_color,game_area,x,y);
+
+endmodule
