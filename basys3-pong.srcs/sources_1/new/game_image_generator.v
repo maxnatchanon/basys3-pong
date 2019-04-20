@@ -64,7 +64,7 @@ module game_image_generator(
     // Scale factor: 8
     always @(x or y)
     begin
-        game_color = game_area[y/8][x/8];
+        game_color = game_area[y/8][(640-x)/8];
     end
 
 endmodule

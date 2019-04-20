@@ -1,19 +1,12 @@
 Vivado Simulator 2018.3
 Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
-Running: /home/natchanon/VivadoXillinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto 090b105a90884541b3291f5dd3361003 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot top_test_behav xil_defaultlib.top_test xil_defaultlib.glbl -log elaborate.log 
+Running: /home/natchanon/VivadoXillinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto 090b105a90884541b3291f5dd3361003 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot start_test_behav xil_defaultlib.start_test xil_defaultlib.glbl -log elaborate.log 
 Using 8 slave threads.
 Starting static elaboration
-WARNING: [VRFC 10-3091] actual bit length 24 differs from formal bit length 33 for port 'data' [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sim_1/new/top_test.v:33]
-WARNING: [VRFC 10-3091] actual bit length 10 differs from formal bit length 2 for port 'address' [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sim_1/new/top_test.v:60]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.mux2_1
-Compiling module xil_defaultlib.rom
-Compiling module xil_defaultlib.mem_io
-Compiling module xil_defaultlib.alu
-Compiling module xil_defaultlib.register
-Compiling module xil_defaultlib.top_test
+Compiling module xil_defaultlib.start_test
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot top_test_behav
+Built simulation snapshot start_test_behav
