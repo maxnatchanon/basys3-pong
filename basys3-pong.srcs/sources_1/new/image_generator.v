@@ -25,7 +25,7 @@ module image_generator(
 	parameter [11:0] WHITE = 4096;
 
 	reg [79:0] game_area [59:0]; 	// Store 80*60 grid game area
-	wire p_clk;						// Pixel scan clock
+	reg p_clk;						// Pixel scan clock
 	wire [9:0] x;  					// Current pixel x position
     wire [8:0] y;  					// Current pixel y position
     wire game_color;				// Game screen pixel color
@@ -34,9 +34,9 @@ module image_generator(
 	wire animate;					// Animate signal for image generator
 
 	// Divide clock
-	wire tclk;
-	clockDiv CD1(tclk,clk);
-	clockDiv CD2(p_clk,tclk);
+	reg [15:0] cnt = 0;
+	always @(posedge clk)
+	   {p_clk,cnt} = cnt + 16'h4000;
 
     // VGA sync
     vga_sync VGA_SYNC(hsync,vsync,animate,x,y,clk,p_clk,nreset);

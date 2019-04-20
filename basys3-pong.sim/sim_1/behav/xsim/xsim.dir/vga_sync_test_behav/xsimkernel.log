@@ -1,0 +1,4 @@
+Running: xsim.dir/vga_sync_test_behav/xsimk -simmode gui -wdb vga_sync_test_behav.wdb -simrunnum 0 -socket 52697
+Design successfully loaded
+Design Loading Memory Usage: 42816 KB (Peak: 42816 KB)
+Design Loading CPU Usage: 30 ms

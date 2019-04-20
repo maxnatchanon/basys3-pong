@@ -14,7 +14,8 @@ module vga_sync(
     output wire [8:0] y,
     input wire clk,
     input wire p_clk,
-    input wire nreset
+    input wire nreset,
+    output h_count
     );
 
     // VGA timings https://timetoexplore.net/blog/video-timings-vga-720p-1080p
