@@ -46,7 +46,7 @@ module image_generator(
     assign rgb = (current_color) ? BLACK : WHITE;
 
 	// Generate game area image
-	game_image_generator GAME_IMG_GEN(game_area,game_state,paddle_1,paddle_2,ball_x,ball_y,animate);
+	game_image_generator GAME_IMG_GEN(game_area,paddle_1,paddle_2,ball_x,ball_y,score_1,score_2,animate);
 
 	// Scale game to 640*480
 	image_scaler GAME_IMG_SCALER(game_color,game_area,x,y);
