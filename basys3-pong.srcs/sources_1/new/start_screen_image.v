@@ -32,8 +32,18 @@ module start_screen_image(
 
 	always @(x or y)
 	begin
-		if (state == 0) out = image0[y/2][(640-x)/2];
-		else out = image1[y/2][(640-x)/2];
+	   if (state == 0)
+	   begin
+           if (x == 0) out = image0[y/2][319];
+           else if (y == 480) out = image0[239][(640-x)/2];
+           else out = image0[y/2][(640-x)/2];
+	   end
+	   else
+	   begin
+           if (x == 0) out = image1[y/2][319];
+           else if (y == 480) out = image1[239][(640-x)/2];
+           else out = image1[y/2][(640-x)/2];
+	   end
 	end
 
 endmodule

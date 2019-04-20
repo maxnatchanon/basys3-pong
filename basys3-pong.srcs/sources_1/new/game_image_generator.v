@@ -31,7 +31,7 @@ module game_image_generator(
 
     initial
     begin
-        $readmem("gameTemplate.mem",template);
+        $readmemb("gameTemplate.mem",template);
     end
 
     number_generator NUM1(score_pixel_1,score_1);
@@ -56,7 +56,7 @@ module game_image_generator(
         for (i=15;i<20;i=i+1)
         begin
             game_area[paddle_1+i][3] = 1;
-            game_area[paddle_2+i][79] = 1;
+            game_area[paddle_2+i][76] = 1;
         end
     end
 
@@ -64,7 +64,9 @@ module game_image_generator(
     // Scale factor: 8
     always @(x or y)
     begin
-        game_color = game_area[y/8][(640-x)/8];
+        if (x == 0) game_color = game_area[y/8][79];
+        else if (y == 480) game_color = game_area[59][(640-x)/8];
+        else game_color = game_area[y/8][(640-x)/8];
     end
 
 endmodule

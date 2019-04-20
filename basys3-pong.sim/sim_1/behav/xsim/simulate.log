@@ -1,0 +1,3 @@
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+$finish called at time : 80 ns : File "/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sim_1/new/game_test.v" Line 68
