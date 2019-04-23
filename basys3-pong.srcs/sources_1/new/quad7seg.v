@@ -1,6 +1,7 @@
 `timescale 1ns/1ps
+
 //-------------------------------------------------------
-// File name    : ps2_receiver.v
+// File name    : quad7seg.v
 // Purpose      : 
 // Developers   : Diligent Corporation
 //-------------------------------------------------------

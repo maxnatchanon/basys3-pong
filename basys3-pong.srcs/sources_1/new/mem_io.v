@@ -20,11 +20,28 @@ module mem_io(
     parameter ADDRESS_WIDTH = 10;
     parameter DATA_WIDTH = 8;
 
-    reg [DATA_WIDTH-1:0] mem [(1<<ADDRESS_WIDTH)-1:0];
+    // Memory address range     => 000 - 3FF
+    // Keycode                  => 3FE - 3FF
+    // Game state               => 000
+    // Player position 1/2      => 001 - 002
+    // Player movement 1/2      => 003 - 004
+    // Ball position x/y        => 011 - 012
+    // Ball speed x/y           => 101 - 102
+    // Score 1/2                => 103 - 104
 
+    reg [DATA_WIDTH-1:0] mem [(1<<ADDRESS_WIDTH)-1:0];
     reg [DATA_WIDTH-1:0] data_out;
+    wire [15:0] keycode;
+
     assign data = (wr == 0) ? data_out : 10'bz;
 
+    // 7-segment display
+    seven_segment SEVEN_SEG(seg,an,dp,keycode,clk);
+
+    // Keyboard
+    keyboard KB(keycode,ps2_data,ps2_clk,clk,nreset);
+
+    // Memory
     always @(address)
     begin
         data_out = mem[address];
@@ -32,6 +49,7 @@ module mem_io(
 
     always @(posedge clk)
     begin
+        // TODO: Assign IO mapped memory
         if (wr == 1) begin
             mem[address] = data;
         end

@@ -30,7 +30,7 @@ module ps2_test(
     
     // PS2 receiver
     ps2_receiver KB(keycode,flag,clk,ps2_clk,ps2_data);
-    keycode_converter KEY_CONV(rkeycode,keycode,flag,clk);
+    keycode_converter KEY_CONV(rkeycode,keycode,flag,clk,nreset);
     
     // 7-Seg display
     quad7seg SEG(seg,dp,an[0],an[1],an[2],an[3],num0,num1,num2,num3,rclk);

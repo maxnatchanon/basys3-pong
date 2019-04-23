@@ -10,7 +10,8 @@ module keycode_converter(
     output reg [15:0] keycodev,
     input wire [15:0] keycode,
     input wire flag,
-    input wire clk
+    input wire clk,
+    input wire nreset
     );
     
     reg cn = 0;
@@ -30,7 +31,7 @@ module keycode_converter(
     end
     
     always@(posedge clk)
-        if (flag == 1'b1 && cn == 1'b1) begin
+        if (flag == 1'b1 && cn == 1'b1 && nreset == 1'b1) begin
             start <= 1'b1;
             keycodev <= keycode;
         end else
