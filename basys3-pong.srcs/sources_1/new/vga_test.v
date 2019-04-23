@@ -19,23 +19,20 @@ module vga_test(
     input wire nreset                  // Reset signal (Active low)
     );
     
-	parameter [11:0] BLACK = 0;
-	parameter [11:0] WHITE = 4095;
+	parameter [11:0] BLACK = 12'b000000000000;
+	parameter [11:0] WHITE = 12'b111111111111;
     
-    wire animate;
     wire [9:0] x;
     wire [8:0] y;
     reg p_clk;
-    reg [15:0] cnt;
+    reg [15:0] cnt = 0;
     wire start_color;
-    
-    always @(posedge clk)
-        {p_clk,cnt} = cnt + 16'h4000;
+    wire video_on, p_tick;
         
-    assign rgb = (start_color == 1) ? WHITE : BLACK;
+    assign rgb = 12'b1111_1111_0000;
     
-    vga_sync VGA_SYNC(hsync,vsync,animate,x,y,clk,p_clk,nreset);
+    vga_sync VGA_SYNC(clk,nreset,hsync,vsync,video_on,p_tick,x,y);
     
-    start_screen_image START_IMG(start_color,x,y,animate);
+    start_screen_image START_IMG(start_color,x,y,vsync,video_on);
     
 endmodule

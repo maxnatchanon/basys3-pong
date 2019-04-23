@@ -6,4 +6,4 @@
 # Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 #
 
-vivado -log vga_test.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source vga_test.tcl -notrace
+vivado -log ps2_test.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source ps2_test.tcl -notrace

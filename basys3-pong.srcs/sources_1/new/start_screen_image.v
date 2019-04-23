@@ -10,7 +10,8 @@ module start_screen_image(
 	output reg out,			// Output pixel value at (x,y)
 	input wire x,			// Input x position
 	input wire y,			// Input y position
-	input wire animate		// Animate signal
+	input wire vsync,		// Vsync signal
+	input wire video_on     // Pixel on display region
 	);
 
 	reg [319:0] image0 [239:0];
@@ -24,25 +25,28 @@ module start_screen_image(
 		$readmemb("startImg1.mem",image1);
 	end
 
-	always @(posedge animate)
+	always @(posedge vsync)
 	begin
 		count = count + 1;
         if (count == 0) state = ~state;
 	end
 
 	always @(x or y)
-	begin
-	   if (state == 0)
-	   begin
-           if (x == 0) out = image0[y/2][319];
-           else if (y == 480) out = image0[239][(640-x)/2];
-           else out = image0[y/2][(640-x)/2];
-	   end
-	   else
-	   begin
-           if (x == 0) out = image1[y/2][319];
-           else if (y == 480) out = image1[239][(640-x)/2];
-           else out = image1[y/2][(640-x)/2];
+    begin
+        if (video_on)
+        begin
+           if (state == 0)
+           begin
+               if (x == 0) out = image0[y/2][319];
+               else if (y == 480) out = image0[239][(640-x)/2];
+               else out = image0[y/2][(640-x)/2];
+           end
+           else
+           begin
+               if (x == 0) out = image1[y/2][319];
+               else if (y == 480) out = image1[239][(640-x)/2];
+               else out = image1[y/2][(640-x)/2];
+           end
 	   end
 	end
 
