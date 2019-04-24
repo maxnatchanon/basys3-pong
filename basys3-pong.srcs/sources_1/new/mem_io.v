@@ -9,6 +9,9 @@ module mem_io(
     output wire [6:0] seg,      // 7-Seg number display
     output wire dp,             // 7-Seg dot display
     output wire [3:0] an,       // 7-Seg selector
+    output wire [11:0] rgb,         // VGA color
+    output wire hsync,              // H-sync signal
+    output wire vsync,              // V-sync sugnal
     inout wire [7:0] data,      // Input-output data
     input wire [9:10] address,  // Input address
     input wire wr,              // Write signal (Active high)
@@ -41,6 +44,9 @@ module mem_io(
     // Keyboard
     keyboard KB(keycode,ps2_data,ps2_clk,clk,nreset);
 
+    // VGA
+    vga VGA(rgb,hsync,vsync,mem[0],mem[1],mem[2],mem[17],mem[18],mem[259],mem[260],clk,nreset);
+
     // Memory
     always @(address)
     begin
@@ -49,10 +55,22 @@ module mem_io(
 
     always @(posedge clk)
     begin
-        // TODO: Assign IO mapped memory
         if (wr == 1) begin
-            mem[address] = data;
+            mem[address] <= data;
         end
+    end
+
+    // Move paddle / Start game
+    always @(keycode)
+    begin
+        {mem[16'h3FE],mem[16'h3FF]} <= keycode;
+        case (keycode)
+        16'h001C: if (mem[10'h001] > 0)  mem[10'h001] <= mem[10'h001] - 1;
+        16'h001B: if (mem[10'h001] < 19) mem[10'h001] <= mem[10'h001] + 1;
+        16'h0042: if (mem[10'h002] > 0)  mem[10'h002] <= mem[10'h002] - 1;
+        16'h004B: if (mem[10'h002] < 19) mem[10'h002] <= mem[10'h002] + 1;
+        16'h0029: if (mem[10'h000) == 0) mem[10'h000] <= 1;
+        endcase
     end
 
 endmodule
