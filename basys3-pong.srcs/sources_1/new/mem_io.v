@@ -69,7 +69,7 @@ module mem_io(
         16'h001B: if (mem[10'h001] < 19) mem[10'h001] <= mem[10'h001] + 1;
         16'h0042: if (mem[10'h002] > 0)  mem[10'h002] <= mem[10'h002] - 1;
         16'h004B: if (mem[10'h002] < 19) mem[10'h002] <= mem[10'h002] + 1;
-        16'h0029: if (mem[10'h000) == 0) mem[10'h000] <= 1;
+        16'h0029: if (mem[10'h000] == 0) mem[10'h000] <= 1;
         endcase
     end
 
