@@ -14,7 +14,7 @@ module rom(
     assign data = mem[address];
 
     initial begin
-        $readmemb("prog.list",mem);
+        $readmemb("prog.mem",mem);
     end
 
 endmodule

@@ -1,0 +1,102 @@
+24-Bit Instruction
+
+000010 => ADDI => INST/REG0/REG1/IMME => 6/5/5/8
+000011 => SUBI => INST/REG0/REG1/IMME => 6/5/5/8
+000100 => BEQ  => INST/REG0/REG1/IMME => 6/5/5/8
+000101 => BEQI => INST/REG0/IMME/IMME => 6/5/5/8
+
+001000 => LD   => INST/REG0/IMME      => 6/5/_/10
+001001 => LDI  => INST/REG0/IMME      => 6/5/_/10
+010000 => ST   => INST/REG0/IMME      => 6/5/_/10
+
+100000 => JMP  => INST/IMME           => 6/_/10
+
+R0 - Game state
+R1 - Ball move counter
+R2 - Ball position x
+R3 - Ball position y
+R4 - Ball speed x
+R5 - Ball speed y
+R6 - Player 1 position
+R7 - Player 2 position
+R8 - Score 1
+R9 - Score 2
+
+
+0 - LD R0 mem[000] 
+1 - BEQI R0 #1 3
+2 - JMP 0
+3 - LDI R1 #0
+4 - LD 
+
+
+
+// [Loop state 0]
+// if state == 1 -> jump to [move ball x]
+// Jump to 0
+
+// [Counter increment]
+// counter += 1
+// Loop check counter
+// Jump to move ball x
+
+// [Move ball x]
+// counter = 0
+// Check speed x
+// speed x == 1 -> ball x -= 1
+// Jump to [move ball y]
+// ball x += 1
+// Jump to [move ball y]
+
+// [Move ball y]
+// Check speed y
+// speed y == 1 -> ball y -= 1
+// Jump to [check crash y]
+// speed y += 1
+// Jump to [check crash y]
+
+// [Check crash y]
+// check ball y position
+// not hit -> jump to [check crash x left]
+// hit -> check y speed
+// y speed == 1 -> y speed = 2
+// Jump to [check crash x left]
+// y speed == 2 -> y speed = 1
+// Jump to [check crash x left]
+
+// [Check crash x left]
+// check ball x position
+// not in position -> jump to [check crash x right]
+// in position -> check paddle1
+// Hit paddle -> x speed = 2
+// Jump to [counter increment]
+// Not hit -> score2 += 1
+// Jump to [check score]
+
+// [Check crash x right]
+// check ball x position
+// not in position -> jump to [counter increment]
+// in position -> check paddle2
+// Hit paddle -> x speed = 1
+// Jump to [counter increment]
+// Not hit -> score1 += 1
+// Jump to [check score]
+
+// [Check score]
+// Check if score1 == 5
+// Check if score2 == 5
+// Jump to [reset game]
+// Jump to [endgame]
+
+// [Reset game]
+// paddle1 = 10
+// paddle2 = 10
+// ball x = 40
+// ball y = 12
+// speed x = 1
+// speed y = 1
+// Jump to move ball
+
+// [Endgame]
+// gamestate = 0
+// Jump to 0
