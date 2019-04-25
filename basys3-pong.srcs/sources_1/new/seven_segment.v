@@ -24,7 +24,7 @@ module seven_segment(
     quad7seg SEG(seg,dp,an[0],an[1],an[2],an[3],num0,num1,num2,num3,rclk);
 
     // Clock div for 7-Seg display
-    assign tclk[0] = clk;x
+    assign tclk[0] = clk;
     genvar i;
     generate
     for (i = 0 ; i < 18 ; i = i+1)

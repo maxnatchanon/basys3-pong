@@ -53,7 +53,7 @@ module top(
     wire [7:0] regA, regB;
     wire [7:0] mem_data;
     assign mem_data = (mem_wr == 1) ? regA : 10'bz;
-    mem_io MEM_IO(seg,dp,an,rgb,hsync,vsync,mem_data,addr,mem_wr,ps2_data,ps2_clk,clk);
+    mem_io MEM_IO(seg,dp,an,rgb,hsync,vsync,mem_data,addr,mem_wr,ps2_data,ps2_clk,clk,nreset);
 
     // Register
     wire [7:0] reg_in;

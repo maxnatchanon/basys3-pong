@@ -22,30 +22,38 @@
 
 module start_test();
 
-	reg [319:0] image0 [239:0];
-	reg [319:0] image1 [239:0];
-	wire out0, out1;
-	reg [9:0] x = 0, y = 0;
-	
-	assign out0 = image0[y][x];
-	assign out1 = image1[y][x];
-    
-    initial
-    begin
-        $readmemb("startImg0.mem",image0);
-        $readmemb("startImg1.mem",image1);
-    end
-    
-    initial
-    begin
-        #0
-        x = 320-72;
-        y = 37;
-        #10
-        x = 320-111;
-        y = 208;
-        #10 $finish;
-    end
-    
+    parameter WHITE = 12'b111111111111;
+    parameter BLACK = 12'b000000000000;
 
+    wire start_color;
+    reg [9:0] x;
+    reg [8:0] y;
+    reg vsync = 0;
+    reg video_on = 0;
+    
+    wire [11:0] rgb;
+    
+    assign rgb = (start_color) ? BLACK : WHITE;
+
+	start_screen_image START_IMG(start_color,x,y,vsync,video_on);
+    
+    always #1 x = x + 1;
+    
+    always @(x)
+    begin
+        if (x == 639)
+        begin
+            x = 0;
+            y = y + 1;
+        end
+    end
+    
+    initial begin
+        #0
+        video_on = 1;
+        x=0;
+        y=50;
+        vsync = 0;
+    end
+    
 endmodule

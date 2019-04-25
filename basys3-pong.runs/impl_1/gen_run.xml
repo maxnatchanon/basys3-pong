@@ -1,83 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1555998568">
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1556123321">
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
-  <File Type="BG-DRC" Name="ps2_test.drc"/>
-  <File Type="BG-BGN" Name="ps2_test.bgn"/>
-  <File Type="BITSTR-SYSDEF" Name="ps2_test.sysdef"/>
+  <File Type="BG-DRC" Name="vga_test.drc"/>
+  <File Type="BG-BGN" Name="vga_test.bgn"/>
+  <File Type="BITSTR-SYSDEF" Name="vga_test.sysdef"/>
   <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="ps2_test.ltx"/>
-  <File Type="BITSTR-MMI" Name="ps2_test.mmi"/>
-  <File Type="BITSTR-BMM" Name="ps2_test_bd.bmm"/>
-  <File Type="BITSTR-NKY" Name="ps2_test.nky"/>
-  <File Type="BITSTR-RBT" Name="ps2_test.rbt"/>
-  <File Type="BITSTR-MSK" Name="ps2_test.msk"/>
-  <File Type="BG-BIN" Name="ps2_test.bin"/>
-  <File Type="BG-BIT" Name="ps2_test.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="ps2_test_bus_skew_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="ps2_test_bus_skew_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="ps2_test_bus_skew_postroute_physopted.rpt"/>
-  <File Type="RDI-RDI" Name="ps2_test.vdi"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="ps2_test_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="ps2_test_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="ps2_test_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="ps2_test_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="ps2_test_postroute_physopt.dcp"/>
-  <File Type="ROUTE-BUS-SKEW" Name="ps2_test_bus_skew_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="ps2_test_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-SIMILARITY" Name="ps2_test_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-TIMING-RPX" Name="ps2_test_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-TIMING-PB" Name="ps2_test_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="ps2_test_timing_summary_routed.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="ps2_test_route_status.pb"/>
-  <File Type="ROUTE-STATUS" Name="ps2_test_route_status.rpt"/>
-  <File Type="ROUTE-PWR-RPX" Name="ps2_test_power_routed.rpx"/>
-  <File Type="ROUTE-PWR-SUM" Name="ps2_test_power_summary_routed.pb"/>
-  <File Type="ROUTE-PWR" Name="ps2_test_power_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="ps2_test_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="ps2_test_methodology_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="ps2_test_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-RPX" Name="ps2_test_drc_routed.rpx"/>
-  <File Type="ROUTE-DRC-PB" Name="ps2_test_drc_routed.pb"/>
-  <File Type="ROUTE-DRC" Name="ps2_test_drc_routed.rpt"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="ps2_test_routed_bb.dcp"/>
-  <File Type="ROUTE-DCP" Name="ps2_test_routed.dcp"/>
-  <File Type="ROUTE-ERROR-DCP" Name="ps2_test_routed_error.dcp"/>
-  <File Type="PHYSOPT-TIMING" Name="ps2_test_timing_summary_physopted.rpt"/>
-  <File Type="PHYSOPT-DRC" Name="ps2_test_drc_physopted.rpt"/>
-  <File Type="PHYSOPT-DCP" Name="ps2_test_physopt.dcp"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="ps2_test_timing_summary_postplace_pwropted.rpt"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="ps2_test_postplace_pwropt.dcp"/>
-  <File Type="PLACE-TIMING" Name="ps2_test_timing_summary_placed.rpt"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="ps2_test_incremental_reuse_pre_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="ps2_test_incremental_reuse_placed.rpt"/>
-  <File Type="PLACE-CTRL" Name="ps2_test_control_sets_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="ps2_test_utilization_placed.pb"/>
-  <File Type="PLACE-UTIL" Name="ps2_test_utilization_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="ps2_test_clock_utilization_placed.rpt"/>
-  <File Type="PLACE-IO" Name="ps2_test_io_placed.rpt"/>
-  <File Type="PLACE-DCP" Name="ps2_test_placed.dcp"/>
-  <File Type="PWROPT-TIMING" Name="ps2_test_timing_summary_pwropted.rpt"/>
-  <File Type="PWROPT-DRC" Name="ps2_test_drc_pwropted.rpt"/>
-  <File Type="PWROPT-DCP" Name="ps2_test_pwropt.dcp"/>
-  <File Type="OPT-TIMING" Name="ps2_test_timing_summary_opted.rpt"/>
-  <File Type="OPT-HWDEF" Name="ps2_test.hwdef"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="ps2_test_methodology_drc_opted.rpt"/>
-  <File Type="OPT-DRC" Name="ps2_test_drc_opted.rpt"/>
-  <File Type="OPT-DCP" Name="ps2_test_opt.dcp"/>
-  <File Type="INIT-TIMING" Name="ps2_test_timing_summary_init.rpt"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="ps2_test_bus_skew_routed.rpx"/>
-  <File Type="REPORTS-TCL" Name="ps2_test_reports.tcl"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="ps2_test_bus_skew_routed.pb"/>
-  <File Type="PA-TCL" Name="ps2_test.tcl"/>
+  <File Type="BITSTR-LTX" Name="vga_test.ltx"/>
+  <File Type="BITSTR-MMI" Name="vga_test.mmi"/>
+  <File Type="BITSTR-BMM" Name="vga_test_bd.bmm"/>
+  <File Type="BITSTR-NKY" Name="vga_test.nky"/>
+  <File Type="BITSTR-RBT" Name="vga_test.rbt"/>
+  <File Type="BITSTR-MSK" Name="vga_test.msk"/>
+  <File Type="BG-BIN" Name="vga_test.bin"/>
+  <File Type="BG-BIT" Name="vga_test.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="vga_test_bus_skew_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="vga_test_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="vga_test_bus_skew_postroute_physopted.rpt"/>
+  <File Type="RDI-RDI" Name="vga_test.vdi"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="vga_test_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="vga_test_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="vga_test_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="vga_test_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="vga_test_postroute_physopt.dcp"/>
+  <File Type="ROUTE-BUS-SKEW" Name="vga_test_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="vga_test_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-SIMILARITY" Name="vga_test_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-TIMING-RPX" Name="vga_test_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-TIMING-PB" Name="vga_test_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="vga_test_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="vga_test_route_status.pb"/>
+  <File Type="ROUTE-STATUS" Name="vga_test_route_status.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="vga_test_power_routed.rpx"/>
+  <File Type="ROUTE-PWR-SUM" Name="vga_test_power_summary_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="vga_test_power_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="vga_test_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="vga_test_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="vga_test_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-RPX" Name="vga_test_drc_routed.rpx"/>
+  <File Type="ROUTE-DRC-PB" Name="vga_test_drc_routed.pb"/>
+  <File Type="ROUTE-DRC" Name="vga_test_drc_routed.rpt"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="vga_test_routed_bb.dcp"/>
+  <File Type="ROUTE-DCP" Name="vga_test_routed.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="vga_test_routed_error.dcp"/>
+  <File Type="PHYSOPT-TIMING" Name="vga_test_timing_summary_physopted.rpt"/>
+  <File Type="PHYSOPT-DRC" Name="vga_test_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="vga_test_physopt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="vga_test_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="vga_test_postplace_pwropt.dcp"/>
+  <File Type="PLACE-TIMING" Name="vga_test_timing_summary_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="vga_test_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="vga_test_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-CTRL" Name="vga_test_control_sets_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="vga_test_utilization_placed.pb"/>
+  <File Type="PLACE-UTIL" Name="vga_test_utilization_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="vga_test_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-IO" Name="vga_test_io_placed.rpt"/>
+  <File Type="PLACE-DCP" Name="vga_test_placed.dcp"/>
+  <File Type="PWROPT-TIMING" Name="vga_test_timing_summary_pwropted.rpt"/>
+  <File Type="PWROPT-DRC" Name="vga_test_drc_pwropted.rpt"/>
+  <File Type="PWROPT-DCP" Name="vga_test_pwropt.dcp"/>
+  <File Type="OPT-TIMING" Name="vga_test_timing_summary_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="vga_test.hwdef"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="vga_test_methodology_drc_opted.rpt"/>
+  <File Type="OPT-DRC" Name="vga_test_drc_opted.rpt"/>
+  <File Type="OPT-DCP" Name="vga_test_opt.dcp"/>
+  <File Type="INIT-TIMING" Name="vga_test_timing_summary_init.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="vga_test_bus_skew_routed.rpx"/>
+  <File Type="REPORTS-TCL" Name="vga_test_reports.tcl"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="vga_test_bus_skew_routed.pb"/>
+  <File Type="PA-TCL" Name="vga_test.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/new/clockDiv.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/new/debouncer.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -85,7 +78,14 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/decoder.v">
+    <File Path="$PSRCDIR/sources_1/new/game_image_generator.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/keyboard.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -99,6 +99,13 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/number_generator.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/ps2_receiver.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -106,31 +113,15 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/quad7seg.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/ps2_test.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/bin2ascii.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/new/start_screen_image.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/vga.v">
+      <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -138,13 +129,43 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/vga_sync.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/vga_test.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/clockDiv.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/decoder.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/quad7seg.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/ps2_test.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -153,14 +174,6 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/alu.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/game_image_generator.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -185,14 +198,6 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/mux2_1.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/number_generator.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -242,9 +247,23 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/seven_segment.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/prog.mem">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="ps2_test"/>
+      <Option Name="TopModule" Val="vga_test"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">

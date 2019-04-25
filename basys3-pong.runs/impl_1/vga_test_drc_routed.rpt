@@ -1,0 +1,48 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Wed Apr 24 23:29:18 2019
+| Host         : natchanon-MacBookPro running 64-bit Ubuntu 16.04.6 LTS
+| Command      : report_drc -file vga_test_drc_routed.rpt -pb vga_test_drc_routed.pb -rpx vga_test_drc_routed.rpx
+| Design       : vga_test
+| Device       : xc7a35tcpg236-1
+| Speed File   : -1
+| Design State : Fully Routed
+------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 2
++-------------+----------+-------------------------------------------------------------+------------+
+| Rule        | Severity | Description                                                 | Violations |
++-------------+----------+-------------------------------------------------------------+------------+
+| PDRC-153    | Warning  | Gated clock check                                           | 1          |
+| PLHOLDVIO-2 | Warning  | Non-Optimal connections which could lead to hold violations | 1          |
++-------------+----------+-------------------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+PDRC-153#1 Warning
+Gated clock check  
+Net VGA/VGA_SYNC/E[0] is a gated clock net sourced by a combinational pin VGA/VGA_SYNC/h_count_reg[9]_i_1/O, cell VGA/VGA_SYNC/h_count_reg[9]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PLHOLDVIO-2#1 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT VGA/VGA_SYNC/h_count_reg[9]_i_1 is driving clock pin of 1 cells. This could lead to large hold time violations. Involved cells are:
+VGA/color_reg_reg[0]
+Related violations: <none>
+
+

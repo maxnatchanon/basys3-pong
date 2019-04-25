@@ -3,13 +3,11 @@
 //-------------------------------------------------------
 // File name    : vga_sync.v
 // Purpose      : 
-// Developers   : 
+// Developers   : embeddedthoughts.com
 //-------------------------------------------------------
 
-
-
-module vga_sync (
-	input wire clk, nreset,
+module vga_sync(
+	input wire clk, reset,
 	output wire hsync, vsync, video_on, p_tick,
 	output wire [9:0] x, y
 	);
@@ -36,8 +34,8 @@ module vga_sync (
 	wire [1:0] pixel_next;
 	wire pixel_tick;
 	
-	always @(posedge clk, negedge nreset)
-		if(nreset == 0)
+	always @(posedge clk, posedge reset)
+		if(reset)
 		  pixel_reg <= 0;
 		else
 		  pixel_reg <= pixel_next;
@@ -54,8 +52,8 @@ module vga_sync (
 	wire vsync_next, hsync_next;
  
 	// infer registers
-	always @(posedge clk, negedge nreset)
-		if(nreset == 0)
+	always @(posedge clk, posedge reset)
+		if(reset)
 		    begin
                     v_count_reg <= 0;
                     h_count_reg <= 0;
@@ -102,4 +100,3 @@ module vga_sync (
         assign y      = v_count_reg;
         assign p_tick = pixel_tick;
 endmodule
-

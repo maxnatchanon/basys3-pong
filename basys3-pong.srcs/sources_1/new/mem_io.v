@@ -18,7 +18,8 @@ module mem_io(
     input wire wr,              // Write signal (Active high)
     input wire ps2_data,        // Keyboard data
     input wire ps2_clk,         // Keyboard clock
-    input wire clk              // Clock
+    input wire clk,             // Clock
+    input wire nreset           // Reset signal (Active low)
     );
 
     parameter ADDRESS_WIDTH = 10;
@@ -39,7 +40,7 @@ module mem_io(
     assign data = (wr == 0) ? data_out : 10'bz;
 
     // 7-segment display
-    seven_segment SEVEN_SEG(seg,an,dp,{mem[10'h3fe,mem[10'h3ff]]},clk);
+    seven_segment SEVEN_SEG(seg,an,dp,{mem[10'h3fe],mem[10'h3ff]},clk);
 
     // Keyboard
     keyboard KB(keycode,ps2_data,ps2_clk,clk,nreset);
