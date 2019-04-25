@@ -66,9 +66,9 @@ module mem_io(
         {mem[16'h3FE],mem[16'h3FF]} <= keycode;
         case (keycode)
         16'h001C: if (mem[10'h001] > 0  & mem[10'h000] == 1) mem[10'h001] <= mem[10'h001] - 1;  // A
-        16'h001B: if (mem[10'h001] < 19 & mem[10'h000] == 1) mem[10'h001] <= mem[10'h001] + 1;  // S
+        16'h001B: if (mem[10'h001] < 20 & mem[10'h000] == 1) mem[10'h001] <= mem[10'h001] + 1;  // S
         16'h0042: if (mem[10'h002] > 0  & mem[10'h000] == 1) mem[10'h002] <= mem[10'h002] - 1;  // K
-        16'h004B: if (mem[10'h002] < 19 & mem[10'h000] == 1) mem[10'h002] <= mem[10'h002] + 1;  // L
+        16'h004B: if (mem[10'h002] < 20 & mem[10'h000] == 1) mem[10'h002] <= mem[10'h002] + 1;  // L
         16'h0029:                                                                               // SPACE
             if (mem[10'h000] == 0)
             begin 
