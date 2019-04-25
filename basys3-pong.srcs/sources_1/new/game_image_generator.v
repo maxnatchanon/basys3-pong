@@ -19,19 +19,22 @@ module game_image_generator(
     input wire [8:0] y
     );
 
-    // Score position - row:[44:56] col:[16:23]&[56:63]
+    // Score position - row:[44:56] col:[16:24]&[55:63]
     // Game position - row:[15:39]
     // Player position - col:[3]&[79]
 
     reg [79:0] game_area [59:0];
-    reg [79:0] template [59:0];
+    reg [2:0] c_score_1 = 0, c_score_2 = 0;
+    reg [4:0] c_paddle_1 = 0, c_paddle_2 = 0;
+    reg [6:0] c_ball_x = 0;
+    reg [4:0] c_ball_y = 0;
     wire [116:0] score_pixel_1;
     wire [116:0] score_pixel_2;
     integer i;
 
     initial
     begin
-        $readmemb("gameTemplate.mem",template);
+        $readmemb("gameTemplate.mem",game_area);
     end
 
     number_generator NUM1(score_pixel_1,score_1);
@@ -39,25 +42,84 @@ module game_image_generator(
 
     always @(posedge animate)
     begin
-        // Load template
-        for (i=0;i<60;i=i+1)
-        begin
-            game_area[i] = template[i];
-        end
-        // Insert score
-        for (i=0;i<13;i=i+1)
-        begin
-            game_area[44+i][23:16] = score_pixel_1[8*i+:9];
-            game_area[44+i][63:56] = score_pixel_2[8*i+:9];
-        end
-        // Insert ball
-        game_area[ball_y+15][ball_x] = 1;
+
         // Insert paddle
-        for (i=15;i<20;i=i+1)
+        if (paddle_1 != c_paddle_1)
         begin
-            game_area[paddle_1+i][3] = 1;
-            game_area[paddle_2+i][76] = 1;
+            game_area[c_paddle_1][79] = 0;
+            game_area[c_paddle_1+1][79] = 0;
+            game_area[c_paddle_1+2][79] = 0;
+            game_area[c_paddle_1+3][79] = 0;
+            game_area[c_paddle_1+4][79] = 0;
+            c_paddle_1 = paddle_1;
+            game_area[c_paddle_1][79] = 1;
+            game_area[c_paddle_1+1][79] = 1;
+            game_area[c_paddle_1+2][79] = 1;
+            game_area[c_paddle_1+3][79] = 1;
+            game_area[c_paddle_1+4][79] = 1;
         end
+
+        if (paddle_2 != c_paddle_2)
+        begin
+            game_area[c_paddle_2][3] = 0;
+            game_area[c_paddle_2+1][3] = 0;
+            game_area[c_paddle_2+2][3] = 0;
+            game_area[c_paddle_2+3][3] = 0;
+            game_area[c_paddle_2+4][3] = 0;
+            c_paddle_2 = paddle_2;
+            game_area[c_paddle_2][3] = 1;
+            game_area[c_paddle_2+1][3] = 1;
+            game_area[c_paddle_2+2][3] = 1;
+            game_area[c_paddle_2+3][3] = 1;
+            game_area[c_paddle_2+4][3] = 1;
+        end
+
+        // Insert ball
+        if (ball_x != c_ball_x | ball_y != c_ball_y)
+        begin
+            game_area[c_ball_y+15][c_ball_x] = 0;
+            game_area[ball_y+15][ball_x] = 1;
+            c_ball_x = ball_x;
+            c_ball_y = ball_y;
+        end
+
+        // Insert score
+        if (score_1 != c_score_1)
+        begin
+            c_score_1 = score_1;
+            game_area[44][63:55] <= score_pixel_1[8:0];
+            game_area[45][63:55] <= score_pixel_1[17:9];
+            game_area[46][63:55] <= score_pixel_1[26:18];
+            game_area[47][63:55] <= score_pixel_1[35:27];
+            game_area[48][63:55] <= score_pixel_1[44:36];
+            game_area[49][63:55] <= score_pixel_1[53:45];
+            game_area[50][63:55] <= score_pixel_1[62:54];
+            game_area[51][63:55] <= score_pixel_1[71:63];
+            game_area[52][63:55] <= score_pixel_1[80:72];
+            game_area[53][63:55] <= score_pixel_1[89:81];
+            game_area[54][63:55] <= score_pixel_1[98:90];
+            game_area[55][63:55] <= score_pixel_1[107:99];
+            game_area[56][63:55] <= score_pixel_1[116:108];
+        end
+
+        if (score_2 != c_score_2)
+        begin
+            c_score_2 = score_1;
+            game_area[44][16:24] <= score_pixel_2[8:0];
+            game_area[45][16:24] <= score_pixel_2[17:9];
+            game_area[46][16:24] <= score_pixel_2[26:18];
+            game_area[47][16:24] <= score_pixel_2[35:27];
+            game_area[48][16:24] <= score_pixel_2[44:36];
+            game_area[49][16:24] <= score_pixel_2[53:45];
+            game_area[50][16:24] <= score_pixel_2[62:54];
+            game_area[51][16:24] <= score_pixel_2[71:63];
+            game_area[52][16:24] <= score_pixel_2[80:72];
+            game_area[53][16:24] <= score_pixel_2[89:81];
+            game_area[54][16:24] <= score_pixel_2[98:90];
+            game_area[55][16:24] <= score_pixel_2[107:99];
+            game_area[56][16:24] <= score_pixel_2[116:108];
+        end
+
     end
 
     // Return pixel color at (x,y) in scaled image
