@@ -20,7 +20,7 @@ module vga_test(
     );
     
     reg [7:0] game_state = 1;
-    reg [7:0] paddle_1 = 0, paddle_2 = 19;
+    reg [7:0] paddle_1 = 0, paddle_2 = 20;
     reg [7:0] ball_x = 40, ball_y = 12;
     reg [7:0] score_1 = 3, score_2 = 4;
     wire [7:0] keycode;

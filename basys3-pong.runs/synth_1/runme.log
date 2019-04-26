@@ -14,14 +14,14 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 7001 
+INFO: Helper process launched with PID 3766 
 WARNING: [Synth 8-2611] redeclaration of ansi port rkeycode is not allowed [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/keyboard.v:18]
 WARNING: [Synth 8-1083] rkeycode was previously declared without a range [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/keyboard.v:18]
 WARNING: [Synth 8-976] rkeycode has already been declared [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/keyboard.v:18]
 WARNING: [Synth 8-2654] second declaration of rkeycode ignored [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/keyboard.v:18]
 INFO: [Synth 8-994] rkeycode is declared here [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/keyboard.v:10]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1382.340 ; gain = 23.414 ; free physical = 4587 ; free virtual = 7289
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1386.191 ; gain = 0.000 ; free physical = 4238 ; free virtual = 7133
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'vga_test' [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/vga_test.v:9]
 INFO: [Synth 8-6157] synthesizing module 'vga' [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/vga.v:9]
@@ -51,70 +51,36 @@ WARNING: [Synth 8-567] referenced signal 'video_on' should be on the sensitivity
 WARNING: [Synth 8-567] referenced signal 'state' should be on the sensitivity list [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/start_screen_image.v:34]
 INFO: [Synth 8-6155] done synthesizing module 'start_screen_image' (2#1) [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/start_screen_image.v:9]
 INFO: [Synth 8-6157] synthesizing module 'game_image_generator' [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:9]
-WARNING: [Synth 8-2898] ignoring malformed $readmem task: invalid memory name [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:34]
+WARNING: [Synth 8-2898] ignoring malformed $readmem task: invalid memory name [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:37]
 INFO: [Synth 8-6157] synthesizing module 'number_generator' [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/number_generator.v:9]
 INFO: [Synth 8-6155] done synthesizing module 'number_generator' (3#1) [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/number_generator.v:9]
-WARNING: [Synth 8-567] referenced signal 'game_area' should be on the sensitivity list [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:65]
-WARNING: [Synth 8-3848] Net template[59] in module/entity game_image_generator does not have driver. [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:27]
-WARNING: [Synth 8-3848] Net template[58] in module/entity game_image_generator does not have driver. [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:27]
-WARNING: [Synth 8-3848] Net template[57] in module/entity game_image_generator does not have driver. [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:27]
-WARNING: [Synth 8-3848] Net template[56] in module/entity game_image_generator does not have driver. [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:27]
-WARNING: [Synth 8-3848] Net template[55] in module/entity game_image_generator does not have driver. [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:27]
-WARNING: [Synth 8-3848] Net template[54] in module/entity game_image_generator does not have driver. [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:27]
-WARNING: [Synth 8-3848] Net template[53] in module/entity game_image_generator does not have driver. [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:27]
-WARNING: [Synth 8-3848] Net template[52] in module/entity game_image_generator does not have driver. [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:27]
-WARNING: [Synth 8-3848] Net template[51] in module/entity game_image_generator does not have driver. [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:27]
-WARNING: [Synth 8-3848] Net template[50] in module/entity game_image_generator does not have driver. [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:27]
-WARNING: [Synth 8-3848] Net template[49] in module/entity game_image_generator does not have driver. [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:27]
-WARNING: [Synth 8-3848] Net template[48] in module/entity game_image_generator does not have driver. [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:27]
-WARNING: [Synth 8-3848] Net template[47] in module/entity game_image_generator does not have driver. [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:27]
-WARNING: [Synth 8-3848] Net template[46] in module/entity game_image_generator does not have driver. [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:27]
-WARNING: [Synth 8-3848] Net template[45] in module/entity game_image_generator does not have driver. [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:27]
-WARNING: [Synth 8-3848] Net template[44] in module/entity game_image_generator does not have driver. [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:27]
-WARNING: [Synth 8-3848] Net template[43] in module/entity game_image_generator does not have driver. [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:27]
-WARNING: [Synth 8-3848] Net template[42] in module/entity game_image_generator does not have driver. [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:27]
-WARNING: [Synth 8-3848] Net template[41] in module/entity game_image_generator does not have driver. [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:27]
-WARNING: [Synth 8-3848] Net template[40] in module/entity game_image_generator does not have driver. [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:27]
-WARNING: [Synth 8-3848] Net template[39] in module/entity game_image_generator does not have driver. [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:27]
-WARNING: [Synth 8-3848] Net template[38] in module/entity game_image_generator does not have driver. [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:27]
-WARNING: [Synth 8-3848] Net template[37] in module/entity game_image_generator does not have driver. [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:27]
-WARNING: [Synth 8-3848] Net template[36] in module/entity game_image_generator does not have driver. [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:27]
-WARNING: [Synth 8-3848] Net template[35] in module/entity game_image_generator does not have driver. [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:27]
-WARNING: [Synth 8-3848] Net template[34] in module/entity game_image_generator does not have driver. [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:27]
-WARNING: [Synth 8-3848] Net template[33] in module/entity game_image_generator does not have driver. [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:27]
-WARNING: [Synth 8-3848] Net template[32] in module/entity game_image_generator does not have driver. [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:27]
-WARNING: [Synth 8-3848] Net template[31] in module/entity game_image_generator does not have driver. [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:27]
-WARNING: [Synth 8-3848] Net template[30] in module/entity game_image_generator does not have driver. [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:27]
-WARNING: [Synth 8-3848] Net template[29] in module/entity game_image_generator does not have driver. [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:27]
-WARNING: [Synth 8-3848] Net template[28] in module/entity game_image_generator does not have driver. [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:27]
-WARNING: [Synth 8-3848] Net template[27] in module/entity game_image_generator does not have driver. [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:27]
-WARNING: [Synth 8-3848] Net template[26] in module/entity game_image_generator does not have driver. [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:27]
-WARNING: [Synth 8-3848] Net template[25] in module/entity game_image_generator does not have driver. [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:27]
-WARNING: [Synth 8-3848] Net template[24] in module/entity game_image_generator does not have driver. [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:27]
-WARNING: [Synth 8-3848] Net template[23] in module/entity game_image_generator does not have driver. [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:27]
-WARNING: [Synth 8-3848] Net template[22] in module/entity game_image_generator does not have driver. [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:27]
-WARNING: [Synth 8-3848] Net template[21] in module/entity game_image_generator does not have driver. [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:27]
-WARNING: [Synth 8-3848] Net template[20] in module/entity game_image_generator does not have driver. [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:27]
-WARNING: [Synth 8-3848] Net template[19] in module/entity game_image_generator does not have driver. [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:27]
-WARNING: [Synth 8-3848] Net template[18] in module/entity game_image_generator does not have driver. [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:27]
-WARNING: [Synth 8-3848] Net template[17] in module/entity game_image_generator does not have driver. [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:27]
-WARNING: [Synth 8-3848] Net template[16] in module/entity game_image_generator does not have driver. [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:27]
-WARNING: [Synth 8-3848] Net template[15] in module/entity game_image_generator does not have driver. [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:27]
-WARNING: [Synth 8-3848] Net template[14] in module/entity game_image_generator does not have driver. [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:27]
-WARNING: [Synth 8-3848] Net template[13] in module/entity game_image_generator does not have driver. [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:27]
-WARNING: [Synth 8-3848] Net template[12] in module/entity game_image_generator does not have driver. [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:27]
-WARNING: [Synth 8-3848] Net template[11] in module/entity game_image_generator does not have driver. [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:27]
-WARNING: [Synth 8-3848] Net template[10] in module/entity game_image_generator does not have driver. [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:27]
-WARNING: [Synth 8-3848] Net template[9] in module/entity game_image_generator does not have driver. [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:27]
-WARNING: [Synth 8-3848] Net template[8] in module/entity game_image_generator does not have driver. [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:27]
-WARNING: [Synth 8-3848] Net template[7] in module/entity game_image_generator does not have driver. [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:27]
-WARNING: [Synth 8-3848] Net template[6] in module/entity game_image_generator does not have driver. [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:27]
-WARNING: [Synth 8-3848] Net template[5] in module/entity game_image_generator does not have driver. [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:27]
-WARNING: [Synth 8-3848] Net template[4] in module/entity game_image_generator does not have driver. [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:27]
-WARNING: [Synth 8-3848] Net template[3] in module/entity game_image_generator does not have driver. [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:27]
-WARNING: [Synth 8-3848] Net template[2] in module/entity game_image_generator does not have driver. [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:27]
-WARNING: [Synth 8-3848] Net template[1] in module/entity game_image_generator does not have driver. [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:27]
-WARNING: [Synth 8-3848] Net template[0] in module/entity game_image_generator does not have driver. [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:27]
+WARNING: [Synth 8-6090] variable 'game_area' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:90]
+WARNING: [Synth 8-6090] variable 'game_area' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:91]
+WARNING: [Synth 8-6090] variable 'game_area' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:92]
+WARNING: [Synth 8-6090] variable 'game_area' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:93]
+WARNING: [Synth 8-6090] variable 'game_area' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:94]
+WARNING: [Synth 8-6090] variable 'game_area' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:95]
+WARNING: [Synth 8-6090] variable 'game_area' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:96]
+WARNING: [Synth 8-6090] variable 'game_area' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:97]
+WARNING: [Synth 8-6090] variable 'game_area' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:98]
+WARNING: [Synth 8-6090] variable 'game_area' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:99]
+WARNING: [Synth 8-6090] variable 'game_area' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:100]
+WARNING: [Synth 8-6090] variable 'game_area' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:101]
+WARNING: [Synth 8-6090] variable 'game_area' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:102]
+WARNING: [Synth 8-6090] variable 'game_area' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:108]
+WARNING: [Synth 8-6090] variable 'game_area' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:109]
+WARNING: [Synth 8-6090] variable 'game_area' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:110]
+WARNING: [Synth 8-6090] variable 'game_area' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:111]
+WARNING: [Synth 8-6090] variable 'game_area' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:112]
+WARNING: [Synth 8-6090] variable 'game_area' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:113]
+WARNING: [Synth 8-6090] variable 'game_area' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:114]
+WARNING: [Synth 8-6090] variable 'game_area' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:115]
+WARNING: [Synth 8-6090] variable 'game_area' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:116]
+WARNING: [Synth 8-6090] variable 'game_area' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:117]
+WARNING: [Synth 8-6090] variable 'game_area' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:118]
+WARNING: [Synth 8-6090] variable 'game_area' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:119]
+WARNING: [Synth 8-6090] variable 'game_area' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:120]
+WARNING: [Synth 8-567] referenced signal 'game_area' should be on the sensitivity list [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:127]
 INFO: [Synth 8-6155] done synthesizing module 'game_image_generator' (4#1) [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:9]
 WARNING: [Synth 8-689] width (8) of port connection 'paddle_1' does not match port width (5) of module 'game_image_generator' [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/vga.v:46]
 WARNING: [Synth 8-689] width (8) of port connection 'paddle_2' does not match port width (5) of module 'game_image_generator' [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/vga.v:46]
@@ -176,7 +142,7 @@ WARNING: [Synth 8-3331] design vga_test has unconnected port an[2]
 WARNING: [Synth 8-3331] design vga_test has unconnected port an[1]
 WARNING: [Synth 8-3331] design vga_test has unconnected port an[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1429.465 ; gain = 70.539 ; free physical = 4586 ; free virtual = 7290
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1464.105 ; gain = 77.914 ; free physical = 4206 ; free virtual = 7103
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -189,10 +155,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1429.465 ; gain = 70.539 ; free physical = 4590 ; free virtual = 7294
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1464.105 ; gain = 77.914 ; free physical = 4214 ; free virtual = 7111
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1429.465 ; gain = 70.539 ; free physical = 4590 ; free virtual = 7294
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1464.105 ; gain = 77.914 ; free physical = 4214 ; free virtual = 7111
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -203,138 +169,171 @@ Parsing XDC File [/home/natchanon/Desktop/HWLab/basys3-pong/Basys-3-Master.xdc]
 Finished Parsing XDC File [/home/natchanon/Desktop/HWLab/basys3-pong/Basys-3-Master.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/natchanon/Desktop/HWLab/basys3-pong/Basys-3-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/vga_test_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/vga_test_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1772.855 ; gain = 0.000 ; free physical = 4280 ; free virtual = 7020
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1810.488 ; gain = 0.000 ; free physical = 3883 ; free virtual = 6815
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1772.855 ; gain = 0.000 ; free physical = 4280 ; free virtual = 7021
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1810.488 ; gain = 0.000 ; free physical = 3884 ; free virtual = 6815
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1772.855 ; gain = 0.000 ; free physical = 4280 ; free virtual = 7021
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1772.855 ; gain = 0.000 ; free physical = 4280 ; free virtual = 7021
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1810.488 ; gain = 0.000 ; free physical = 3884 ; free virtual = 6815
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1810.488 ; gain = 0.000 ; free physical = 3884 ; free virtual = 6815
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1772.855 ; gain = 413.930 ; free physical = 4374 ; free virtual = 7115
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1810.488 ; gain = 424.297 ; free physical = 3998 ; free virtual = 6930
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1772.855 ; gain = 413.930 ; free physical = 4374 ; free virtual = 7115
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1810.488 ; gain = 424.297 ; free physical = 3998 ; free virtual = 6930
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1772.855 ; gain = 413.930 ; free physical = 4375 ; free virtual = 7116
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1810.488 ; gain = 424.297 ; free physical = 4000 ; free virtual = 6932
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "image0" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "image1" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5545] ROM "game_area_reg[50]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[50]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[49]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[49]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[48]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[48]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[47]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[47]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[46]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[46]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[45]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[45]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[44]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[44]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[43]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[43]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[42]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[42]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[41]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[41]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[40]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[40]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[39]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[39]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[38]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[38]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[37]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[37]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[36]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[36]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "game_area_reg[35]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "game_area_reg[35]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "game_area_reg[35]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "game_area_reg[35]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "game_area_reg[35]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "game_area_reg[35]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "game_area_reg[34]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "game_area_reg[34]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "game_area_reg[34]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "game_area_reg[33]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "game_area_reg[33]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "game_area_reg[33]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "game_area_reg[32]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "game_area_reg[32]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[31]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[31]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[30]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[30]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[29]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[29]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[28]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[28]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[27]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[27]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[26]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[26]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[25]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[25]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[24]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[24]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[23]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[23]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[22]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[22]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[21]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[21]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[20]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[20]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[19]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[19]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[49]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[49]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[48]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[48]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[48]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[48]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[47]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[47]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[47]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[47]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[47]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[47]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[46]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[46]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[46]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[46]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[46]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[46]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[46]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[46]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[45]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[45]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[45]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[45]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[45]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[45]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[45]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[45]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[44]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[44]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[44]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[44]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[44]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[44]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[44]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "game_area_reg[44]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Common 17-14] Message 'Synth 8-5545' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-5546] ROM "O" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "count" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "game_area_reg[32]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "game_area_reg[31]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[31]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[31]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[30]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[30]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[30]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[29]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[29]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[29]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[28]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[28]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[28]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[27]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[27]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[27]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[26]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[26]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[26]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[25]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[25]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[25]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[24]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[24]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[24]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[23]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[23]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[23]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[22]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[22]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[22]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[21]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[21]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[21]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[20]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[20]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[20]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[19]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[19]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[19]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[18]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[18]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[18]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[17]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[17]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[17]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[16]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[16]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[16]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[15]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[15]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[15]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[14]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[14]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[14]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[13]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[13]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[13]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[12]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[12]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[12]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[11]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[11]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[11]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[10]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[10]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[10]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[9]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[9]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[9]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[8]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[8]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[8]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[7]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[7]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[7]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[6]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[6]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[6]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[5]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[5]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[5]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[4]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[4]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[4]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[3]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[3]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[3]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[2]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[2]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[2]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "game_area_reg[1]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "game_area_reg[1]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "game_area_reg[1]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "game_area_reg[1]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "game_area_reg[1]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "game_area_reg[1]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "game_area_reg[1]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "game_area_reg[1]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "game_area_reg[1]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[0]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[0]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[0]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "game_area_reg[35]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "game_area_reg[35]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "game_area_reg[35]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "game_area_reg[35]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "game_area_reg[35]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "game_area_reg[35]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "game_area_reg[34]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "game_area_reg[34]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "game_area_reg[34]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "game_area_reg[33]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "game_area_reg[33]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "game_area_reg[33]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "game_area_reg[32]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "game_area_reg[32]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "game_area_reg[32]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "game_area_reg[31]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "game_area_reg[31]" won't be mapped to RAM because it is too sparse
+INFO: [Common 17-14] Message 'Synth 8-5546' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-5544] ROM "game_area_reg[1]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "game_area_reg[1]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "cnt" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-5546] ROM "game_state" won't be mapped to RAM because it is too sparse
 WARNING: [Synth 8-327] inferring latch for variable 'out_reg' [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/start_screen_image.v:40]
 WARNING: [Synth 8-327] inferring latch for variable 'out_reg' [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/number_generator.v:17]
 WARNING: [Synth 8-327] inferring latch for variable 'game_state_reg' [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/vga_test.v:28]
@@ -342,14 +341,18 @@ WARNING: [Synth 8-327] inferring latch for variable 'paddle_1_reg' [/home/natcha
 WARNING: [Synth 8-327] inferring latch for variable 'paddle_2_reg' [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/vga_test.v:28]
 WARNING: [Synth 8-327] inferring latch for variable 'score_1_reg' [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/vga_test.v:28]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1772.855 ; gain = 413.930 ; free physical = 4353 ; free virtual = 7095
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 1810.488 ; gain = 424.297 ; free physical = 3964 ; free virtual = 6897
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
++------+--------------------------+------------+----------+
+|      |RTL Partition             |Replication |Instances |
++------+--------------------------+------------+----------+
+|1     |game_image_generator__GB0 |           1|     47288|
+|2     |game_image_generator__GB1 |           1|     14939|
+|3     |vga__GC0                  |           1|     13975|
+|4     |vga_test__GC0             |           1|       373|
++------+--------------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -366,20 +369,25 @@ Detailed RTL Component Info :
 	               16 Bit    Registers := 2     
 	               10 Bit    Registers := 2     
 	                8 Bit    Registers := 2     
+	                7 Bit    Registers := 1     
 	                6 Bit    Registers := 1     
-	                5 Bit    Registers := 2     
+	                5 Bit    Registers := 3     
 	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 2     
 	                2 Bit    Registers := 1     
 	                1 Bit    Registers := 11    
 +---Muxes : 
 	 241 Input    320 Bit        Muxes := 2     
 	   8 Input    117 Bit        Muxes := 2     
 	   7 Input    117 Bit        Muxes := 2     
-	   2 Input     80 Bit        Muxes := 32    
+	   2 Input     80 Bit        Muxes := 271   
 	   2 Input     12 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 32    
 	   2 Input      4 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 331   
-	   3 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 412   
+	   3 Input      1 Bit        Muxes := 2     
+	   5 Input      1 Bit        Muxes := 128   
+	   4 Input      1 Bit        Muxes := 54    
 	  12 Input      1 Bit        Muxes := 2     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -392,6 +400,32 @@ Module vga_test
 Detailed RTL Component Info : 
 +---Muxes : 
 	   2 Input      1 Bit        Muxes := 1     
+Module number_generator__1 
+Detailed RTL Component Info : 
++---Muxes : 
+	   8 Input    117 Bit        Muxes := 1     
+	   7 Input    117 Bit        Muxes := 1     
+Module number_generator 
+Detailed RTL Component Info : 
++---Muxes : 
+	   8 Input    117 Bit        Muxes := 1     
+	   7 Input    117 Bit        Muxes := 1     
+Module game_image_generator 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               80 Bit    Registers := 60    
+	                7 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                3 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     80 Bit        Muxes := 271   
+	   2 Input      9 Bit        Muxes := 32    
+	   2 Input      1 Bit        Muxes := 403   
+	   3 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 128   
+	   4 Input      1 Bit        Muxes := 54    
 Module vga_sync 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -412,26 +446,21 @@ Detailed RTL Component Info :
 +---Muxes : 
 	 241 Input    320 Bit        Muxes := 2     
 	   2 Input      1 Bit        Muxes := 3     
-Module number_generator 
-Detailed RTL Component Info : 
-+---Muxes : 
-	   8 Input    117 Bit        Muxes := 1     
-	   7 Input    117 Bit        Muxes := 1     
-Module game_image_generator 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     32 Bit       Adders := 1     
-+---Registers : 
-	               80 Bit    Registers := 60    
-+---Muxes : 
-	   2 Input     80 Bit        Muxes := 32    
-	   2 Input      1 Bit        Muxes := 322   
 Module vga 
 Detailed RTL Component Info : 
 +---Registers : 
 	                1 Bit    Registers := 1     
 +---Muxes : 
 	   2 Input     12 Bit        Muxes := 1     
+Module debouncer__1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
++---Registers : 
+	                5 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
 Module debouncer 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -476,70 +505,23 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-INFO: [Synth 8-5544] ROM "game_area_reg[50]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "game_area_reg[50]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "game_area_reg[49]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "game_area_reg[49]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "game_area_reg[48]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "game_area_reg[48]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "game_area_reg[47]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "game_area_reg[47]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "game_area_reg[46]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "game_area_reg[46]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "game_area_reg[45]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "game_area_reg[45]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "game_area_reg[44]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "game_area_reg[44]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "game_area_reg[43]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "game_area_reg[43]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "game_area_reg[42]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "game_area_reg[42]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "game_area_reg[41]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "game_area_reg[41]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "game_area_reg[40]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "game_area_reg[40]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "game_area_reg[39]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "game_area_reg[39]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "game_area_reg[38]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "game_area_reg[38]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "game_area_reg[37]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "game_area_reg[37]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "game_area_reg[36]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "game_area_reg[36]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "game_area_reg[35]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "game_area_reg[35]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "game_area_reg[34]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "game_area_reg[34]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "game_area_reg[33]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "game_area_reg[33]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "game_area_reg[32]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "game_area_reg[32]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "game_area_reg[31]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "game_area_reg[31]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "game_area_reg[30]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "game_area_reg[30]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "game_area_reg[29]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "game_area_reg[29]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "game_area_reg[28]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "game_area_reg[28]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "game_area_reg[27]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "game_area_reg[27]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "game_area_reg[26]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "game_area_reg[26]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "game_area_reg[25]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "game_area_reg[25]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "game_area_reg[24]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "game_area_reg[24]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "game_area_reg[23]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "game_area_reg[23]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "game_area_reg[22]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "game_area_reg[22]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "game_area_reg[21]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "game_area_reg[21]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "game_area_reg[20]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "game_area_reg[20]" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5546] ROM "game_state" won't be mapped to RAM because it is too sparse
-WARNING: [Synth 8-3331] design start_screen_image has unconnected port y[0]
+INFO: [Synth 8-4471] merging register 'game_area_reg[58][79:0]' into 'game_area_reg[59][79:0]' [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:49]
+INFO: [Synth 8-4471] merging register 'game_area_reg[57][79:0]' into 'game_area_reg[59][79:0]' [/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.srcs/sources_1/new/game_image_generator.v:49]
+INFO: [Synth 8-5545] ROM "game_area_reg[35]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "game_area_reg[35]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "game_area_reg[35]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "game_area_reg[35]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "game_area_reg[35]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "game_area_reg[34]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "game_area_reg[34]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "game_area_reg[33]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "game_area_reg[33]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "game_area_reg[32]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "game_area_reg[32]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "game_area_reg[32]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "game_area_reg[33]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "game_area_reg[34]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "game_area_reg[35]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 WARNING: [Synth 8-3331] design vga_test has unconnected port seg[6]
 WARNING: [Synth 8-3331] design vga_test has unconnected port seg[5]
 WARNING: [Synth 8-3331] design vga_test has unconnected port seg[4]
@@ -552,257 +534,251 @@ WARNING: [Synth 8-3331] design vga_test has unconnected port an[3]
 WARNING: [Synth 8-3331] design vga_test has unconnected port an[2]
 WARNING: [Synth 8-3331] design vga_test has unconnected port an[1]
 WARNING: [Synth 8-3331] design vga_test has unconnected port an[0]
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\paddle_2_reg[3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\paddle_2_reg[2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (number_generator:/\out_reg[25] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\paddle_1_reg[3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\paddle_1_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\paddle_1_reg[2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\paddle_1_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\paddle_1_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\score_1_reg[6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\score_1_reg[7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\score_1_reg[5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\score_1_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\score_1_reg[3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\score_1_reg[2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[46][79] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[45][79] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[44][79] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[43][79] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[42][79] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[41][79] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[40][79] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[39][79] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[38][79] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[37][79] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[36][79] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[35][79] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[34][79] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[33][79] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[32][79] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[31][79] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[30][79] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[29][79] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[28][79] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[27][79] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[26][79] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[25][79] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[24][79] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[23][79] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[22][79] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[21][79] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[20][79] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[19][79] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[18][79] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[17][79] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[16][79] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[15][79] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[46][78] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[45][78] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[44][78] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[43][78] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[42][78] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[41][78] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[40][78] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[39][78] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[38][78] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[37][78] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[36][78] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[35][78] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[34][78] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[33][78] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[32][78] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[31][78] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[30][78] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[29][78] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[28][78] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[27][78] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[26][78] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[25][78] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[24][78] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[23][78] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[22][78] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[21][78] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[20][78] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[19][78] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[18][78] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[17][78] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[16][78] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[15][78] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[46][77] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[45][77] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[44][77] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[43][77] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[42][77] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[41][77] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[40][77] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[39][77] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[38][77] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[37][77] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[36][77] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[35][77] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[34][77] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[33][77] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[32][77] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[31][77] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[30][77] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[29][77] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[28][77] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[27][77] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[26][77] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\VGA/GAME_IMG /\game_area_reg[25][77] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[59][79] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[56][79] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[55][79] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[54][79] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[53][79] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[52][79] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[51][79] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[50][79] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[49][79] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[48][79] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[47][79] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[59][78] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[56][78] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[55][78] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[54][78] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[53][78] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[52][78] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[51][78] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[50][78] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[49][78] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[48][78] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[47][78] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[14][78] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[13][78] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[12][78] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[11][78] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[10][78] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[9][78] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[8][78] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[7][78] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[6][78] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[5][78] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[4][78] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[3][78] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[2][78] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[1][78] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[0][78] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[59][77] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[56][77] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[55][77] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[54][77] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[53][77] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[52][77] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[51][77] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[50][77] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[49][77] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[48][77] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[47][77] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[14][77] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[13][77] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[12][77] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[11][77] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[10][77] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[9][77] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[8][77] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[7][77] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[6][77] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[5][77] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[4][77] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[3][77] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[2][77] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[1][77] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[0][77] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[59][76] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[56][76] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[55][76] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[54][76] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[53][76] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[52][76] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[51][76] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[50][76] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[49][76] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[48][76] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[47][76] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[14][76] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[13][76] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[12][76] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[11][76] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[10][76] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[9][76] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[8][76] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[7][76] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[6][76] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[5][76] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[4][76] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[3][76] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[2][76] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[1][76] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[0][76] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[59][75] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[56][75] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[55][75] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[54][75] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[53][75] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[52][75] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[51][75] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[50][75] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[49][75] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[48][75] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (GAME_IMGi_1/\game_area_reg[47][75] )
 INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[47][76]' (FDS) to 'VGA/GAME_IMG/game_area_reg[49][76]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[45][76]' (FDS) to 'VGA/GAME_IMG/game_area_reg[44][76]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[44][76]' (FDS) to 'VGA/GAME_IMG/game_area_reg[43][76]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[41][76]' (FDS) to 'VGA/GAME_IMG/game_area_reg[40][76]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[40][76]' (FDS) to 'VGA/GAME_IMG/game_area_reg[39][76]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[37][76]' (FDS) to 'VGA/GAME_IMG/game_area_reg[36][76]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[36][76]' (FDS) to 'VGA/GAME_IMG/game_area_reg[35][76]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[35][76]' (FDS) to 'VGA/GAME_IMG/game_area_reg[34][76]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[49][76]' (FDS) to 'VGA/GAME_IMG/game_area_reg[48][76]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[51][63]' (FD) to 'VGA/GAME_IMG/game_area_reg[56][59]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[50][63]' (FD) to 'VGA/GAME_IMG/game_area_reg[51][61]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[51][23]' (FD) to 'VGA/GAME_IMG/game_area_reg[56][19]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[50][23]' (FD) to 'VGA/GAME_IMG/game_area_reg[51][21]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[56][63]' (FDE) to 'GAME_IMGi_1/game_area_reg[56][56]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[56][62]' (FDE) to 'GAME_IMGi_1/game_area_reg[56][56]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[55][62]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][56]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[54][62]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][56]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[53][62]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][56]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[52][62]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][56]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[51][62]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][56]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[50][62]' (FDE) to 'GAME_IMGi_1/game_area_reg[50][56]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[49][62]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][56]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[48][62]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][56]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[47][62]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][56]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[56][61]' (FDE) to 'GAME_IMGi_1/game_area_reg[56][56]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[55][61]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][56]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[54][61]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][56]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[53][61]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][56]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[52][61]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][56]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[51][61]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][56]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[50][61]' (FDE) to 'GAME_IMGi_1/game_area_reg[50][56]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[49][61]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][56]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[48][61]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][56]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[47][61]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][56]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[56][60]' (FDE) to 'GAME_IMGi_1/game_area_reg[56][56]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[55][60]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][56]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[54][60]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][56]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[53][60]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][56]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[52][60]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][56]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[51][60]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][56]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[50][60]' (FDE) to 'GAME_IMGi_1/game_area_reg[50][56]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[49][60]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][56]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[48][60]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][56]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[47][60]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][56]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[56][58]' (FDE) to 'GAME_IMGi_1/game_area_reg[56][56]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[55][58]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][56]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[54][58]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][56]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[53][58]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][56]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[52][58]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][56]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[51][58]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][56]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[50][58]' (FDE) to 'GAME_IMGi_1/game_area_reg[50][56]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[49][58]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][56]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[48][58]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][56]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[47][58]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][56]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[56][57]' (FDE) to 'GAME_IMGi_1/game_area_reg[56][56]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[55][57]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][56]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[54][57]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][56]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[53][57]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][56]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[52][57]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][56]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[51][57]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][56]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[50][57]' (FDE) to 'GAME_IMGi_1/game_area_reg[50][56]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[49][57]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][56]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[48][57]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][56]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[47][57]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][56]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[55][56]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][56]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[54][56]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][56]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[53][56]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][56]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[52][56]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][56]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[51][56]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][56]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[49][56]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][56]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[48][56]' (FDE) to 'GAME_IMGi_1/game_area_reg[47][56]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[56][24]' (FDE) to 'GAME_IMGi_1/game_area_reg[56][17]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[56][23]' (FDE) to 'GAME_IMGi_1/game_area_reg[56][17]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[55][23]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][17]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[54][23]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][17]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[53][23]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][17]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[52][23]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][17]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[51][23]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][17]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[50][23]' (FDE) to 'GAME_IMGi_1/game_area_reg[50][17]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[49][23]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][17]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[48][23]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][17]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[47][23]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][17]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[56][22]' (FDE) to 'GAME_IMGi_1/game_area_reg[56][17]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[55][22]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][17]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[54][22]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][17]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[53][22]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][17]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[52][22]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][17]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[51][22]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][17]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[50][22]' (FDE) to 'GAME_IMGi_1/game_area_reg[50][17]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[49][22]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][17]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[48][22]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][17]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[47][22]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][17]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[56][21]' (FDE) to 'GAME_IMGi_1/game_area_reg[56][17]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[55][21]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][17]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[54][21]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][17]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[53][21]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][17]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[52][21]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][17]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[51][21]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][17]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[50][21]' (FDE) to 'GAME_IMGi_1/game_area_reg[50][17]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[49][21]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][17]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[48][21]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][17]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[47][21]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][17]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[56][19]' (FDE) to 'GAME_IMGi_1/game_area_reg[56][17]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[55][19]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][17]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[54][19]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][17]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[53][19]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][17]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[52][19]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][17]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[51][19]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][17]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[50][19]' (FDE) to 'GAME_IMGi_1/game_area_reg[50][17]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[49][19]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][17]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[48][19]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][17]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[47][19]' (FDE) to 'GAME_IMGi_1/game_area_reg[48][17]'
+INFO: [Synth 8-3886] merging instance 'GAME_IMGi_1/game_area_reg[56][18]' (FDE) to 'GAME_IMGi_1/game_area_reg[56][17]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-3332] Sequential element (out_reg[25]) is unused and will be removed from module number_generator__1.
 WARNING: [Synth 8-3332] Sequential element (out_reg[25]) is unused and will be removed from module number_generator.
-WARNING: [Synth 8-3332] Sequential element (game_state_reg[7]) is unused and will be removed from module vga_test.
-WARNING: [Synth 8-3332] Sequential element (game_state_reg[6]) is unused and will be removed from module vga_test.
-WARNING: [Synth 8-3332] Sequential element (game_state_reg[5]) is unused and will be removed from module vga_test.
-WARNING: [Synth 8-3332] Sequential element (game_state_reg[4]) is unused and will be removed from module vga_test.
-WARNING: [Synth 8-3332] Sequential element (game_state_reg[3]) is unused and will be removed from module vga_test.
-WARNING: [Synth 8-3332] Sequential element (game_state_reg[2]) is unused and will be removed from module vga_test.
-WARNING: [Synth 8-3332] Sequential element (game_state_reg[1]) is unused and will be removed from module vga_test.
-WARNING: [Synth 8-3332] Sequential element (paddle_1_reg[7]) is unused and will be removed from module vga_test.
-WARNING: [Synth 8-3332] Sequential element (paddle_1_reg[6]) is unused and will be removed from module vga_test.
-WARNING: [Synth 8-3332] Sequential element (paddle_1_reg[5]) is unused and will be removed from module vga_test.
-WARNING: [Synth 8-3332] Sequential element (paddle_1_reg[4]) is unused and will be removed from module vga_test.
-WARNING: [Synth 8-3332] Sequential element (paddle_1_reg[3]) is unused and will be removed from module vga_test.
-WARNING: [Synth 8-3332] Sequential element (paddle_1_reg[2]) is unused and will be removed from module vga_test.
-WARNING: [Synth 8-3332] Sequential element (paddle_1_reg[1]) is unused and will be removed from module vga_test.
-WARNING: [Synth 8-3332] Sequential element (paddle_1_reg[0]) is unused and will be removed from module vga_test.
-WARNING: [Synth 8-3332] Sequential element (paddle_2_reg[7]) is unused and will be removed from module vga_test.
-WARNING: [Synth 8-3332] Sequential element (paddle_2_reg[6]) is unused and will be removed from module vga_test.
-WARNING: [Synth 8-3332] Sequential element (paddle_2_reg[5]) is unused and will be removed from module vga_test.
-WARNING: [Synth 8-3332] Sequential element (paddle_2_reg[3]) is unused and will be removed from module vga_test.
-WARNING: [Synth 8-3332] Sequential element (paddle_2_reg[2]) is unused and will be removed from module vga_test.
-WARNING: [Synth 8-3332] Sequential element (score_1_reg[7]) is unused and will be removed from module vga_test.
-WARNING: [Synth 8-3332] Sequential element (score_1_reg[6]) is unused and will be removed from module vga_test.
-WARNING: [Synth 8-3332] Sequential element (score_1_reg[5]) is unused and will be removed from module vga_test.
-WARNING: [Synth 8-3332] Sequential element (score_1_reg[4]) is unused and will be removed from module vga_test.
-WARNING: [Synth 8-3332] Sequential element (score_1_reg[3]) is unused and will be removed from module vga_test.
-WARNING: [Synth 8-3332] Sequential element (score_1_reg[2]) is unused and will be removed from module vga_test.
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[47][63]' (FD) to 'VGA/GAME_IMG/game_area_reg[56][63]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[56][63]' (FD) to 'VGA/GAME_IMG/game_area_reg[46][62]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[52][63]' (FD) to 'VGA/GAME_IMG/game_area_reg[56][58]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[46][62]' (FD) to 'VGA/GAME_IMG/game_area_reg[55][62]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[55][62]' (FD) to 'VGA/GAME_IMG/game_area_reg[45][61]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[50][62]' (FD) to 'VGA/GAME_IMG/game_area_reg[45][56]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[45][61]' (FD) to 'VGA/GAME_IMG/game_area_reg[54][61]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[54][61]' (FD) to 'VGA/GAME_IMG/game_area_reg[53][60]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[53][60]' (FD) to 'VGA/GAME_IMG/game_area_reg[52][59]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[52][59]' (FD) to 'VGA/GAME_IMG/game_area_reg[50][57]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[45][56]' (FD) to 'VGA/GAME_IMG/game_area_reg[44][56]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[47][23]' (FD) to 'VGA/GAME_IMG/game_area_reg[56][23]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[56][23]' (FD) to 'VGA/GAME_IMG/game_area_reg[46][22]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[52][23]' (FD) to 'VGA/GAME_IMG/game_area_reg[56][18]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[46][22]' (FD) to 'VGA/GAME_IMG/game_area_reg[55][22]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[55][22]' (FD) to 'VGA/GAME_IMG/game_area_reg[45][21]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[50][22]' (FD) to 'VGA/GAME_IMG/game_area_reg[45][16]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[45][21]' (FD) to 'VGA/GAME_IMG/game_area_reg[54][21]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[54][21]' (FD) to 'VGA/GAME_IMG/game_area_reg[53][20]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[53][20]' (FD) to 'VGA/GAME_IMG/game_area_reg[52][19]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[52][19]' (FD) to 'VGA/GAME_IMG/game_area_reg[50][17]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[45][16]' (FD) to 'VGA/GAME_IMG/game_area_reg[44][16]'
-WARNING: [Synth 8-3332] Sequential element (out_reg) is unused and will be removed from module start_screen_image.
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[56][58]' (FD) to 'VGA/GAME_IMG/game_area_reg[55][57]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[55][57]' (FD) to 'VGA/GAME_IMG/game_area_reg[54][56]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[56][18]' (FD) to 'VGA/GAME_IMG/game_area_reg[55][17]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[55][17]' (FD) to 'VGA/GAME_IMG/game_area_reg[54][16]'
 WARNING: [Synth 8-3332] Sequential element (out_reg[26]) is unused and will be removed from module number_generator__1.
 WARNING: [Synth 8-3332] Sequential element (out_reg[26]) is unused and will be removed from module number_generator.
+WARNING: [Synth 8-3332] Sequential element (out_reg) is unused and will be removed from module start_screen_image.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 1772.855 ; gain = 413.930 ; free physical = 4337 ; free virtual = 7068
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 1810.488 ; gain = 424.297 ; free physical = 3932 ; free virtual = 6883
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
++------+--------------------------+------------+----------+
+|      |RTL Partition             |Replication |Instances |
++------+--------------------------+------------+----------+
+|1     |game_image_generator__GB0 |           1|       293|
+|2     |game_image_generator__GB1 |           1|        20|
+|3     |vga__GC0                  |           1|       128|
++------+--------------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 1772.855 ; gain = 413.930 ; free physical = 4218 ; free virtual = 6956
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 1810.488 ; gain = 424.297 ; free physical = 3813 ; free virtual = 6770
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 1772.855 ; gain = 413.930 ; free physical = 4218 ; free virtual = 6956
+Finished Timing Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 1810.488 ; gain = 424.297 ; free physical = 3810 ; free virtual = 6768
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
++------+--------------------------+------------+----------+
+|      |RTL Partition             |Replication |Instances |
++------+--------------------------+------------+----------+
+|1     |game_image_generator__GB0 |           1|       293|
+|2     |game_image_generator__GB1 |           1|        20|
+|3     |vga__GC0                  |           1|       128|
++------+--------------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[59][3]' (FDS) to 'VGA/GAME_IMG/game_area_reg[1][76]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[58][3]' (FDS) to 'VGA/GAME_IMG/game_area_reg[1][76]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[57][3]' (FDS) to 'VGA/GAME_IMG/game_area_reg[1][76]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[56][3]' (FDS) to 'VGA/GAME_IMG/game_area_reg[1][76]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[55][3]' (FDS) to 'VGA/GAME_IMG/game_area_reg[1][76]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[54][3]' (FDS) to 'VGA/GAME_IMG/game_area_reg[1][76]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[53][3]' (FDS) to 'VGA/GAME_IMG/game_area_reg[1][76]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[52][3]' (FDS) to 'VGA/GAME_IMG/game_area_reg[1][76]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[51][3]' (FDS) to 'VGA/GAME_IMG/game_area_reg[1][76]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[50][3]' (FDS) to 'VGA/GAME_IMG/game_area_reg[1][76]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[14][3]' (FDS) to 'VGA/GAME_IMG/game_area_reg[1][76]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[13][3]' (FDS) to 'VGA/GAME_IMG/game_area_reg[1][76]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[12][3]' (FDS) to 'VGA/GAME_IMG/game_area_reg[1][76]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[11][3]' (FDS) to 'VGA/GAME_IMG/game_area_reg[1][76]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[10][3]' (FDS) to 'VGA/GAME_IMG/game_area_reg[1][76]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[9][3]' (FDS) to 'VGA/GAME_IMG/game_area_reg[1][76]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[8][3]' (FDS) to 'VGA/GAME_IMG/game_area_reg[1][76]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[7][3]' (FDS) to 'VGA/GAME_IMG/game_area_reg[1][76]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[6][3]' (FDS) to 'VGA/GAME_IMG/game_area_reg[1][76]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[5][3]' (FDS) to 'VGA/GAME_IMG/game_area_reg[1][76]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[4][3]' (FDS) to 'VGA/GAME_IMG/game_area_reg[1][76]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[3][3]' (FDS) to 'VGA/GAME_IMG/game_area_reg[1][76]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[2][3]' (FDS) to 'VGA/GAME_IMG/game_area_reg[1][76]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[1][3]' (FDS) to 'VGA/GAME_IMG/game_area_reg[1][76]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[0][3]' (FDS) to 'VGA/GAME_IMG/game_area_reg[1][76]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[59][76]' (FDS) to 'VGA/GAME_IMG/game_area_reg[1][76]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[58][76]' (FDS) to 'VGA/GAME_IMG/game_area_reg[1][76]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[57][76]' (FDS) to 'VGA/GAME_IMG/game_area_reg[1][76]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[56][76]' (FDS) to 'VGA/GAME_IMG/game_area_reg[1][76]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[55][76]' (FDS) to 'VGA/GAME_IMG/game_area_reg[1][76]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[54][76]' (FDS) to 'VGA/GAME_IMG/game_area_reg[1][76]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[53][76]' (FDS) to 'VGA/GAME_IMG/game_area_reg[1][76]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[52][76]' (FDS) to 'VGA/GAME_IMG/game_area_reg[1][76]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[51][76]' (FDS) to 'VGA/GAME_IMG/game_area_reg[1][76]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[50][76]' (FDS) to 'VGA/GAME_IMG/game_area_reg[1][76]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[14][76]' (FDS) to 'VGA/GAME_IMG/game_area_reg[1][76]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[13][76]' (FDS) to 'VGA/GAME_IMG/game_area_reg[1][76]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[12][76]' (FDS) to 'VGA/GAME_IMG/game_area_reg[1][76]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[11][76]' (FDS) to 'VGA/GAME_IMG/game_area_reg[1][76]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[10][76]' (FDS) to 'VGA/GAME_IMG/game_area_reg[1][76]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[9][76]' (FDS) to 'VGA/GAME_IMG/game_area_reg[1][76]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[8][76]' (FDS) to 'VGA/GAME_IMG/game_area_reg[1][76]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[7][76]' (FDS) to 'VGA/GAME_IMG/game_area_reg[1][76]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[6][76]' (FDS) to 'VGA/GAME_IMG/game_area_reg[1][76]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[5][76]' (FDS) to 'VGA/GAME_IMG/game_area_reg[1][76]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[4][76]' (FDS) to 'VGA/GAME_IMG/game_area_reg[1][76]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[3][76]' (FDS) to 'VGA/GAME_IMG/game_area_reg[1][76]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[2][76]' (FDS) to 'VGA/GAME_IMG/game_area_reg[1][76]'
-INFO: [Synth 8-3886] merging instance 'VGA/GAME_IMG/game_area_reg[1][76]' (FDS) to 'VGA/GAME_IMG/game_area_reg[0][76]'
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 1772.855 ; gain = 413.930 ; free physical = 4219 ; free virtual = 6957
+Finished Technology Mapping : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 1810.488 ; gain = 424.297 ; free physical = 3814 ; free virtual = 6772
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -826,7 +802,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 1772.855 ; gain = 413.930 ; free physical = 4219 ; free virtual = 6957
+Finished IO Insertion : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 1810.488 ; gain = 424.297 ; free physical = 3814 ; free virtual = 6772
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -839,7 +815,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 1772.855 ; gain = 413.930 ; free physical = 4219 ; free virtual = 6957
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 1810.488 ; gain = 424.297 ; free physical = 3814 ; free virtual = 6772
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -851,25 +827,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 1772.855 ; gain = 413.930 ; free physical = 4219 ; free virtual = 6957
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 1810.488 ; gain = 424.297 ; free physical = 3814 ; free virtual = 6772
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 1772.855 ; gain = 413.930 ; free physical = 4219 ; free virtual = 6957
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 1810.488 ; gain = 424.297 ; free physical = 3814 ; free virtual = 6772
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 1772.855 ; gain = 413.930 ; free physical = 4219 ; free virtual = 6957
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 1810.488 ; gain = 424.297 ; free physical = 3814 ; free virtual = 6772
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 1772.855 ; gain = 413.930 ; free physical = 4219 ; free virtual = 6957
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 1810.488 ; gain = 424.297 ; free physical = 3814 ; free virtual = 6772
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -887,50 +863,47 @@ Report Cell Usage:
 +------+------+------+
 |1     |BUFG  |     1|
 |2     |LUT1  |     3|
-|3     |LUT2  |     4|
-|4     |LUT3  |     7|
-|5     |LUT4  |    10|
+|3     |LUT2  |     5|
+|4     |LUT3  |     8|
+|5     |LUT4  |    11|
 |6     |LUT5  |    14|
-|7     |LUT6  |    36|
-|8     |MUXF7 |     1|
-|9     |FDCE  |    24|
-|10    |FDRE  |     1|
-|11    |IBUF  |     2|
-|12    |OBUF  |    14|
-|13    |OBUFT |    12|
+|7     |LUT6  |    23|
+|8     |FDCE  |    24|
+|9     |FDRE  |     3|
+|10    |IBUF  |     2|
+|11    |OBUF  |    14|
+|12    |OBUFT |    12|
 +------+------+------+
 
 Report Instance Areas: 
 +------+-------------+---------------------+------+
 |      |Instance     |Module               |Cells |
 +------+-------------+---------------------+------+
-|1     |top          |                     |   129|
-|2     |  VGA        |vga                  |   100|
-|3     |    GAME_IMG |game_image_generator |    16|
-|4     |    VGA_SYNC |vga_sync             |    83|
+|1     |top          |                     |   120|
+|2     |  VGA        |vga                  |    91|
+|3     |    GAME_IMG |game_image_generator |     3|
+|4     |    VGA_SYNC |vga_sync             |    87|
 +------+-------------+---------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 1772.855 ; gain = 413.930 ; free physical = 4219 ; free virtual = 6957
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 1810.488 ; gain = 424.297 ; free physical = 3814 ; free virtual = 6772
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 49 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1772.855 ; gain = 70.539 ; free physical = 4272 ; free virtual = 7011
-Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 1772.863 ; gain = 413.930 ; free physical = 4272 ; free virtual = 7011
+Synthesis finished with 0 errors, 0 critical warnings and 23 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 1810.488 ; gain = 77.914 ; free physical = 3866 ; free virtual = 6824
+Synthesis Optimization Complete : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 1810.496 ; gain = 424.297 ; free physical = 3866 ; free virtual = 6824
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1772.863 ; gain = 0.000 ; free physical = 4217 ; free virtual = 6956
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1810.496 ; gain = 0.000 ; free physical = 3813 ; free virtual = 6771
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-396 Infos, 163 Warnings, 0 Critical Warnings and 0 Errors encountered.
+394 Infos, 103 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:37 . Memory (MB): peak = 1772.863 ; gain = 414.023 ; free physical = 4275 ; free virtual = 7013
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1772.863 ; gain = 0.000 ; free physical = 4275 ; free virtual = 7013
+synth_design: Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 1810.496 ; gain = 424.391 ; free physical = 3869 ; free virtual = 6828
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1810.496 ; gain = 0.000 ; free physical = 3869 ; free virtual = 6828
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint '/home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.runs/synth_1/vga_test.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file vga_test_utilization_synth.rpt -pb vga_test_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Apr 24 23:28:35 2019...
+INFO: [Common 17-206] Exiting Vivado at Thu Apr 25 14:51:40 2019...
