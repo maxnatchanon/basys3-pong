@@ -12,7 +12,8 @@ module mem_io(
     output wire [3:0] an,       // 7-Seg selector
     output wire [11:0] rgb,     // VGA color
     output wire hsync,          // H-sync signal
-    output wire vsync,          // V-sync sugnal
+    output wire vsync,          // V-sync signal
+    output wire [1:0] led,      // LED signal
     inout wire [7:0] data,      // Input-output data
     input wire [9:10] address,  // Input address
     input wire wr,              // Write signal (Active high)
@@ -30,25 +31,49 @@ module mem_io(
     // Game state               => 000
     // Player position 1/2      => 001 - 002
     // Ball position x/y        => 011 - 012
-    // Ball speed x/y           => 101 - 102    (1 - to left/up, 2 - to right/down)
+    // Ball speed x/y           => 101 - 102
     // Score 1/2                => 103 - 104
 
     reg [DATA_WIDTH-1:0] mem [(1<<ADDRESS_WIDTH)-1:0];
     reg [DATA_WIDTH-1:0] data_out;
     wire [15:0] keycode;
+    reg [15:0] c_keycode = 0;
 
-    assign data = (wr == 0) ? data_out : 10'bz;
+    // Drive LED signal
+    assign led[0] = (mem[10'h000] == 0);
+    assign led[1] = (mem[10'h000] == 1);
 
     // 7-segment display
     seven_segment SEVEN_SEG(seg,an,dp,{mem[10'h3fe],mem[10'h3ff]},clk);
 
     // Keyboard
-    keyboard KB(keycode,ps2_data,ps2_clk,clk,nreset);
+    wire [15:0] tkeycode; 
+    wire flag;
+    ps2_receiver KB(tkeycode,flag,clk,ps2_clk,ps2_data);
+    keycode_converter KEY_CONV(keycode,tkeycode,flag,clk,nreset);
 
-    // VGA
-    vga VGA(rgb,hsync,vsync,mem[0],mem[1],mem[2],mem[17],mem[18],mem[259],mem[260],clk,nreset);
+    // 7-segment display
+    // seven_segment SEVEN_SEG(seg,an,dp,keycode,clk);
+    wire rclk;
+    wire [18:0] tclk;
+    wire [3:0] num0, num1, num2, num3;
+    assign {num0,num1,num2,num3} = keycode;
+    
+    quad7seg SEG(seg,dp,an[0],an[1],an[2],an[3],num0,num1,num2,num3,rclk);
+    
+    assign tclk[0] = clk;
+    genvar i;
+    generate
+    for (i = 0 ; i < 18 ; i = i+1)
+    begin
+        clockDiv c1(tclk[i+1],tclk[i]);
+    end
+    endgenerate
+    clockDiv c2(rclk,tclk[18]);
 
     // Memory
+    assign data = (wr == 0) ? data_out : 10'bz;
+    
     always @(address)
     begin
         data_out = mem[address];
@@ -56,22 +81,27 @@ module mem_io(
 
     always @(posedge clk)
     begin
-        if (wr == 1) begin
+        if (wr == 1)
+        begin
             mem[address] <= data;
         end
-    end
 
-    // Move paddle / Start game
-    always @(keycode)
-    begin
-        {mem[16'h3FE],mem[16'h3FF]} <= keycode;
-        case (keycode)
-        16'h001C: if (mem[10'h001] > 0  & mem[10'h000] == 1) mem[10'h001] <= mem[10'h001] - 1;  // A
-        16'h001B: if (mem[10'h001] < 20 & mem[10'h000] == 1) mem[10'h001] <= mem[10'h001] + 1;  // S
-        16'h0042: if (mem[10'h002] > 0  & mem[10'h000] == 1) mem[10'h002] <= mem[10'h002] - 1;  // K
-        16'h004B: if (mem[10'h002] < 20 & mem[10'h000] == 1) mem[10'h002] <= mem[10'h002] + 1;  // L
-        16'h0029:                                                                               // SPACE
-            if (mem[10'h000] == 0)
+        // Move paddle / Start game
+        if (keycode != c_keycode) 
+        begin
+            c_keycode <= keycode;
+            {mem[16'h3FE],mem[16'h3FF]} <= keycode;
+            if (keycode[15:8] != 8'hf0)
+            begin
+                case (keycode[7:0])
+                8'h1c: if (mem[10'h001] > 0  & mem[10'h000] == 1) mem[10'h001] <= mem[10'h001] - 1;  // A
+                8'h1b: if (mem[10'h001] < 20 & mem[10'h000] == 1) mem[10'h001] <= mem[10'h001] + 1;  // S
+                8'h42: if (mem[10'h002] > 0  & mem[10'h000] == 1) mem[10'h002] <= mem[10'h002] - 1;  // K
+                8'h4b: if (mem[10'h002] < 20 & mem[10'h000] == 1) mem[10'h002] <= mem[10'h002] + 1;  // L
+                endcase
+            end
+
+            if (keycode[7:0] == 8'h29 & mem[10'h000] == 0) // SPACE
             begin 
                 mem[10'h000] <= 1;      // Set game state to 1
                 mem[10'h001] <= 10;     // Set paddle 1 position
@@ -81,7 +111,7 @@ module mem_io(
                 mem[10'h101] <= 1;      // Set ball x speed
                 mem[10'h102] <= 1;      // Set ball y speed
             end
-        endcase
+        end
     end
 
 endmodule

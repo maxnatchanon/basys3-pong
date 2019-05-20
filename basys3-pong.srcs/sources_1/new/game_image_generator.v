@@ -56,95 +56,23 @@ module game_image_generator(
     number_generator NUM1(score_pixel_1,score_1);
     number_generator NUM2(score_pixel_2,score_2);
 
-    always @(posedge animate)
-    begin
-
-        // Insert paddle
-        if (paddle_1 != c_paddle_1)
-        begin
-            game_area[c_paddle_1+15][76] = 0;
-            game_area[c_paddle_1+16][76] = 0;
-            game_area[c_paddle_1+17][76] = 0;
-            game_area[c_paddle_1+18][76] = 0;
-            game_area[c_paddle_1+19][76] = 0;
-            c_paddle_1 = paddle_1;
-            game_area[c_paddle_1+15][76] = 1;
-            game_area[c_paddle_1+16][76] = 1;
-            game_area[c_paddle_1+17][76] = 1;
-            game_area[c_paddle_1+18][76] = 1;
-            game_area[c_paddle_1+19][76] = 1;
-        end
-
-        if (paddle_2 != c_paddle_2)
-        begin
-            game_area[c_paddle_2+15][3] = 0;
-            game_area[c_paddle_2+16][3] = 0;
-            game_area[c_paddle_2+17][3] = 0;
-            game_area[c_paddle_2+18][3] = 0;
-            game_area[c_paddle_2+19][3] = 0;
-            c_paddle_2 = paddle_2;
-            game_area[c_paddle_2+15][3] = 1;
-            game_area[c_paddle_2+16][3] = 1;
-            game_area[c_paddle_2+17][3] = 1;
-            game_area[c_paddle_2+18][3] = 1;
-            game_area[c_paddle_2+19][3] = 1;
-        end
-
-        // Insert ball
-        if (ball_x != c_ball_x | ball_y != c_ball_y)
-        begin
-            game_area[c_ball_y+15][c_ball_x] = 0;
-            game_area[ball_y+15][ball_x] = 1;
-            c_ball_x = ball_x;
-            c_ball_y = ball_y;
-        end
-
-        // Insert score
-        if (score_1 != c_score_1)
-        begin
-            c_score_1 = score_1;
-            game_area[44][62:56] <= score_pixel_1[6:0];
-            game_area[45][62:56] <= score_pixel_1[13:7];
-            game_area[46][62:56] <= score_pixel_1[20:14];
-            game_area[47][62:56] <= score_pixel_1[27:21];
-            game_area[48][62:56] <= score_pixel_1[34:28];
-            game_area[49][62:56] <= score_pixel_1[41:35];
-            game_area[50][62:56] <= score_pixel_1[48:42];
-            game_area[51][62:56] <= score_pixel_1[55:49];
-            game_area[52][62:56] <= score_pixel_1[62:56];
-            game_area[53][62:56] <= score_pixel_1[69:63];
-            game_area[54][62:56] <= score_pixel_1[76:70];
-            game_area[55][62:56] <= score_pixel_1[83:77];
-            game_area[56][62:56] <= score_pixel_1[90:84];
-        end
-
-        if (score_2 != c_score_2)
-        begin
-            c_score_2 = score_1;
-            game_area[44][23:17] <= score_pixel_2[6:0];
-            game_area[45][23:17] <= score_pixel_2[13:7];
-            game_area[46][23:17] <= score_pixel_2[20:14];
-            game_area[47][23:17] <= score_pixel_2[27:21];
-            game_area[48][23:17] <= score_pixel_2[34:28];
-            game_area[49][23:17] <= score_pixel_2[41:35];
-            game_area[50][23:17] <= score_pixel_2[48:42];
-            game_area[51][23:17] <= score_pixel_2[55:49];
-            game_area[52][23:17] <= score_pixel_2[62:56];
-            game_area[53][23:17] <= score_pixel_2[69:63];
-            game_area[54][23:17] <= score_pixel_2[76:70];
-            game_area[55][23:17] <= score_pixel_2[83:77];
-            game_area[56][23:17] <= score_pixel_2[90:84];
-        end
-
-    end
+    // Pixel flags
+    wire on_paddle_1, on_paddle_2, on_template, on_ball, on_score_1, on_score_2;
+    assign on_paddle_1 = ((639-x)/8 == 76) & ((c_paddle_1 <= (y/8)-15) & (c_paddle_1+5 > (y/8)-15));
+    assign on_paddle_2 = ((639-x)/8 == 3) & ((c_paddle_2 <= (y/8)-15) & (c_paddle_2+5 > (y/8)-15));
+    assign on_template = game_area[y/8][(639-x)/8];
+    assign on_ball = ((639-x)/8 == c_ball_x & y/8 == c_ball_y+15);
+    assign on_score_1 = ((639-x)/8 >= 56 & (639-x)/8 < 63) & (y/8 >= 44 & y/8 < 57) & score_pixel_1[(7*((y/8)-44)+((639-x)/8)-56)];
+    assign on_score_2 = ((639-x)/8 >= 17 & (639-x)/8 < 24) & (y/8 >= 44 & y/8 < 57) & score_pixel_2[(7*((y/8)-44)+((639-x)/8)-17)];
 
     // Return pixel color at (x,y) in scaled image
-    // Scale factor: 8
-    always @(x or y)
+    always @(x, y)
     begin
-        if (x == 0) game_color = game_area[y/8][79];
-        else if (y == 480) game_color = game_area[59][(640-x)/8];
-        else game_color = game_area[y/8][(640-x)/8];
-    end
+        if (video_on)
+        begin
+            game_color <= (on_template | on_paddle_1 | on_paddle_2 | on_ball | on_score_1 | on_score_2);
+	    end
+	    else game_color = 12'h0;
+	end
 
 endmodule

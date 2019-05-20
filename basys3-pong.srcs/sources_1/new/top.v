@@ -12,6 +12,7 @@ module top(
     output wire [11:0] rgb,            // VGA color
     output wire hsync,                 // H-sync signal
     output wire vsync,                 // V-sync sugnal
+    output wire [1:0] led,                   // LED signal
     input wire ps2_data,               // Keyboard data
     input wire ps2_clk,                // Keyboard clock
     input wire clk,                    // Clock
@@ -53,7 +54,7 @@ module top(
     wire [7:0] regA, regB;
     wire [7:0] mem_data;
     assign mem_data = (mem_wr == 1) ? regA : 10'bz;
-    mem_io MEM_IO(seg,dp,an,rgb,hsync,vsync,mem_data,addr,mem_wr,ps2_data,ps2_clk,clk,nreset);
+    mem_io MEM_IO(seg,dp,an,rgb,hsync,vsync,led,mem_data,addr,mem_wr,ps2_data,ps2_clk,clk,nreset);
 
     // Register
     wire [7:0] reg_in;
