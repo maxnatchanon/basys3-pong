@@ -1,16 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1556178650">
-  <File Type="VDS-TIMING-PB" Name="vga_test_timing_summary_synth.pb"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="vga_test_timing_summary_synth.rpt"/>
-  <File Type="RDS-DCP" Name="vga_test.dcp"/>
-  <File Type="RDS-UTIL-PB" Name="vga_test_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="vga_test_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="vga_test_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="vga_test.vds"/>
-  <File Type="REPORTS-TCL" Name="vga_test_reports.tcl"/>
-  <File Type="PA-TCL" Name="vga_test.tcl"/>
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1558345209">
+  <File Type="VDS-TIMING-PB" Name="vgakb7seg_test_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="vgakb7seg_test_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="vgakb7seg_test.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="vgakb7seg_test_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="vgakb7seg_test_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="vgakb7seg_test_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="vgakb7seg_test.vds"/>
+  <File Type="REPORTS-TCL" Name="vgakb7seg_test_reports.tcl"/>
+  <File Type="PA-TCL" Name="vgakb7seg_test.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/clockDiv.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/debouncer.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -18,14 +25,14 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/game_image_generator.v">
+    <File Path="$PSRCDIR/sources_1/new/decoder.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/keyboard.v">
+    <File Path="$PSRCDIR/sources_1/new/game_image_generator.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -53,6 +60,20 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/quad7seg.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/singlePulser.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/start_screen_image.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -74,22 +95,14 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/vga_test.v">
+    <File Path="$PSRCDIR/sources_1/new/vgakb7seg_test.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/clockDiv.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/decoder.v">
+    <File Path="$PSRCDIR/sources_1/new/seven_segment.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -97,15 +110,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/quad7seg.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/ps2_test.v">
+    <File Path="$PSRCDIR/sources_1/new/keyboard.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -161,6 +166,22 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/vga_test.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/ps2_test.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/startImg0.mem">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -179,14 +200,6 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/seven_segment.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/new/prog.mem">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -195,7 +208,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="vga_test"/>
+      <Option Name="TopModule" Val="vgakb7seg_test"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">

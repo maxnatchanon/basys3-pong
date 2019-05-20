@@ -13,8 +13,8 @@ module rom(
     reg	[31:0] mem [(1<<10)-1:0];
     assign data = mem[address];
 
-    initial begin
-        $readmemb("prog.mem",mem);
-    end
+//    initial begin
+//        $readmemb("prog.mem",mem);
+//    end
 
 endmodule

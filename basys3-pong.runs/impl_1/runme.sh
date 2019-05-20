@@ -38,6 +38,6 @@ EAStep()
 
 # pre-commands:
 /bin/touch .write_bitstream.begin.rst
-EAStep vivado -log vga_test.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source vga_test.tcl -notrace
+EAStep vivado -log vgakb7seg_test.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source vgakb7seg_test.tcl -notrace
 
 

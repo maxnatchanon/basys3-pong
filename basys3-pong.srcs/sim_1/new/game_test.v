@@ -31,8 +31,9 @@ module game_test();
     reg animate;
     reg [9:0] x;
     reg [8:0] y;
+    reg video_on = 1;
     
-    game_image_generator GAME_GEN(game_color,p1,p2,bx,by,s1,s2,animate,x,y);
+    game_image_generator GAME_GEN(game_color,p1,p2,bx,by,s1,s2,animate,x,y,video_on);
     
     initial
     begin
@@ -46,13 +47,7 @@ module game_test();
         
         #10
         animate = 0;
-        x = 416; y = 24;
-        
-        #10
-        x = 616; y = 136;
-        
-        #10
-        x = 0; y = 0;
+        x = 31; y = 120;
         
         #10
         p1 = 10;
@@ -62,9 +57,16 @@ module game_test();
         
         #10
         animate = 0;
-        x = 616; y = 136;
+        x = 32;
         
         #10
+        x = 31;
+        
+        #10
+        x = 247;
+        y = 40;
+        
+        #20
         $finish;
     end
 

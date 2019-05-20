@@ -1,0 +1,114 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Mon May 20 16:42:00 2019
+| Host         : natchanon-MacBookPro running 64-bit Ubuntu 16.04.6 LTS
+| Command      : report_control_sets -verbose -file vgakb7seg_test_control_sets_placed.rpt
+| Design       : vgakb7seg_test
+| Device       : xc7a35t
+-------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    42 |
+| Unused register locations in slices containing registers |   232 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      1 |           25 |
+|      2 |            3 |
+|      4 |            2 |
+|      5 |            3 |
+|      6 |            1 |
+|      8 |            1 |
+|      9 |            1 |
+|     11 |            1 |
+|    16+ |            5 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              64 |           41 |
+| No           | No                    | Yes                    |               4 |            3 |
+| No           | Yes                   | No                     |               7 |            3 |
+| Yes          | No                    | No                     |              46 |           16 |
+| Yes          | No                    | Yes                    |              78 |           28 |
+| Yes          | Yes                   | No                     |              25 |            8 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++------------------------------------+----------------------------------+----------------------------------+------------------+----------------+
+|            Clock Signal            |           Enable Signal          |         Set/Reset Signal         | Slice Load Count | Bel Load Count |
++------------------------------------+----------------------------------+----------------------------------+------------------+----------------+
+|  clk_IBUF_BUFG                     | KB/db_clk/clear                  |                                  |                1 |              1 |
+|  VGA/VGA_SYNC/E[0]                 |                                  |                                  |                1 |              1 |
+|  VGA/VGA_SYNC/v_count_reg_reg[6]_0 |                                  |                                  |                1 |              1 |
+|  genblk1[3].c1/outClk_reg_0        |                                  |                                  |                1 |              1 |
+|  genblk1[2].c1/outClk_reg_0        |                                  |                                  |                1 |              1 |
+|  genblk1[0].c1/outClk_reg_0        |                                  |                                  |                1 |              1 |
+|  genblk1[10].c1/outClk_reg_0       |                                  |                                  |                1 |              1 |
+|  VGA/GAME_IMG/reset_game_reg_1     |                                  | VGA/VGA_SYNC/AR[0]               |                1 |              1 |
+|  genblk1[9].c1/outClk_reg_0        |                                  |                                  |                1 |              1 |
+|  genblk1[11].c1/outClk_reg_0       |                                  |                                  |                1 |              1 |
+|  genblk1[8].c1/outClk_reg_0        |                                  |                                  |                1 |              1 |
+|  clk_IBUF_BUFG                     | KB/db_data/O_i_1__0_n_0          |                                  |                1 |              1 |
+|  clk_IBUF_BUFG                     | KB/db_clk/O_i_1_n_0              |                                  |                1 |              1 |
+|  clk_IBUF_BUFG                     | KB/db_data/Iv_i_1__0_n_0         |                                  |                1 |              1 |
+|  genblk1[1].c1/outClk_reg_0        |                                  |                                  |                1 |              1 |
+|  genblk1[17].c1/outClk_reg_0       |                                  |                                  |                1 |              1 |
+|  genblk1[16].c1/outClk_reg_0       |                                  |                                  |                1 |              1 |
+|  genblk1[15].c1/outClk_reg_0       |                                  |                                  |                1 |              1 |
+|  genblk1[14].c1/outClk_reg_0       |                                  |                                  |                1 |              1 |
+|  genblk1[7].c1/outClk_reg_0        |                                  |                                  |                1 |              1 |
+|  genblk1[4].c1/outClk_reg_0        |                                  |                                  |                1 |              1 |
+|  genblk1[13].c1/outClk_reg_0       |                                  |                                  |                1 |              1 |
+|  genblk1[6].c1/outClk_reg_0        |                                  |                                  |                1 |              1 |
+|  genblk1[5].c1/outClk_reg_0        |                                  |                                  |                1 |              1 |
+|  genblk1[12].c1/outClk_reg_0       |                                  |                                  |                1 |              1 |
+|  c2/CLK                            |                                  |                                  |                1 |              2 |
+|  KEY_CONV/nreset[0]                |                                  |                                  |                1 |              2 |
+|  KEY_CONV/E[0]                     |                                  |                                  |                1 |              2 |
+|  clk_IBUF_BUFG                     |                                  | VGA/VGA_SYNC/AR[0]               |                3 |              4 |
+| ~KB/db_clk/O_reg_0                 | KB/cnt                           | KB/cnt[3]_i_1_n_0                |                1 |              4 |
+|  clk_IBUF_BUFG                     | KB/db_data/count[4]_i_1__1_n_0   | KB/db_data/Iv_i_1__0_n_0         |                1 |              5 |
+|  vsync_OBUF_BUFG                   | VGA/GAME_IMG/sp1/E[0]            |                                  |                2 |              5 |
+|  vsync_OBUF_BUFG                   | VGA/GAME_IMG/sp3/E[0]            |                                  |                2 |              5 |
+|  vsync_OBUF_BUFG                   |                                  | VGA/GAME_IMG/game_state_reg[0]   |                2 |              6 |
+|  clk_IBUF_BUFG                     |                                  |                                  |                5 |              8 |
+| ~KB/db_clk/O_reg_0                 |                                  |                                  |                3 |              9 |
+|  clk_IBUF_BUFG                     | VGA/VGA_SYNC/E[0]                | VGA/VGA_SYNC/AR[0]               |                4 |             11 |
+|  clk_IBUF_BUFG                     | KEY_CONV/keycodev[15]_i_1_n_0    |                                  |                4 |             16 |
+|  clk_IBUF_BUFG                     | KB/oflag_i_1_n_0                 |                                  |                4 |             16 |
+|  vsync_OBUF_BUFG                   | VGA/GAME_IMG/c_ball_x[7]_i_2_n_0 | VGA/GAME_IMG/c_ball_x[7]_i_1_n_0 |                6 |             16 |
+|  vsync_OBUF_BUFG                   |                                  |                                  |               10 |             21 |
+|  clk_IBUF_BUFG                     | VGA/VGA_SYNC/v_count_reg0        | VGA/VGA_SYNC/AR[0]               |               24 |             67 |
++------------------------------------+----------------------------------+----------------------------------+------------------+----------------+
+
+

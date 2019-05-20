@@ -40,7 +40,7 @@ module mem_io(
     assign data = (wr == 0) ? data_out : 10'bz;
 
     // 7-segment display
-    seven_segment SEVEN_SEG(seg,an,dp,{mem[10'h3fe],mem[10'h3ff]},clk);
+    seven_segment SEVEN_SEG(seg,an,dp,keycode,clk);
 
     // Keyboard
     keyboard KB(keycode,ps2_data,ps2_clk,clk,nreset);
@@ -54,17 +54,18 @@ module mem_io(
         data_out = mem[address];
     end
 
-    always @(posedge clk)
-    begin
-        if (wr == 1) begin
-            mem[address] <= data;
-        end
-    end
+//    always @(posedge clk)
+//    begin
+//        if (wr == 1) begin
+//            mem[address] <= data;
+//        end
+//    end
 
     // Move paddle / Start game
     always @(keycode)
     begin
-        {mem[16'h3FE],mem[16'h3FF]} <= keycode;
+//        mem[10'h3fe] <= keycode[15:8];
+//        mem[10'h3ff] <= keycode[7:0];
         case (keycode)
         16'h001C: if (mem[10'h001] > 0  & mem[10'h000] == 1) mem[10'h001] <= mem[10'h001] - 1;  // A
         16'h001B: if (mem[10'h001] < 20 & mem[10'h000] == 1) mem[10'h001] <= mem[10'h001] + 1;  // S

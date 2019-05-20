@@ -7,6 +7,7 @@
 //-------------------------------------------------------
 
 module vga(
+    output wire reset_game,
     output wire [11:0] rgb,         // VGA color
     output wire hsync,              // H-sync signal
     output wire vsync,              // V-sync sugnal
@@ -43,6 +44,6 @@ module vga(
     
     vga_sync VGA_SYNC(clk,reset,hsync,vsync,video_on,p_tick,x,y);
     start_screen_image START_IMG(start_color,x,y,vsync,video_on);
-    game_image_generator GAME_IMG(game_color,paddle_1,paddle_2,ball_x,ball_y,score_1,score_2,vsync,x,y);
+    game_image_generator GAME_IMG(reset_game,game_color,paddle_1,paddle_2,ball_x,ball_y,score_1,score_2,vsync,x,y,video_on,game_state);
 
 endmodule

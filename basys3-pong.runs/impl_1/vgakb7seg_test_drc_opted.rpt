@@ -1,0 +1,42 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Mon May 20 16:41:55 2019
+| Host         : natchanon-MacBookPro running 64-bit Ubuntu 16.04.6 LTS
+| Command      : report_drc -file vgakb7seg_test_drc_opted.rpt -pb vgakb7seg_test_drc_opted.pb -rpx vgakb7seg_test_drc_opted.rpx
+| Design       : vgakb7seg_test
+| Device       : xc7a35tcpg236-1
+| Speed File   : -1
+| Design State : Synthesized
+---------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 1
++-------------+----------+-------------------------------------------------------------+------------+
+| Rule        | Severity | Description                                                 | Violations |
++-------------+----------+-------------------------------------------------------------+------------+
+| PLHOLDVIO-2 | Warning  | Non-Optimal connections which could lead to hold violations | 1          |
++-------------+----------+-------------------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+PLHOLDVIO-2#1 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT VGA/VGA_SYNC/h_count_reg[9]_i_1 is driving clock pin of 1 cells. This could lead to large hold time violations. Involved cells are:
+VGA/color_reg_reg[0]
+Related violations: <none>
+
+

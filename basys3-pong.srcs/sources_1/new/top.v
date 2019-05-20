@@ -20,7 +20,7 @@ module top(
 
     // Instruction fetch
     reg [9:0] pc = 0;
-    reg [9:0] pc_new;
+    wire [9:0] pc_new;
     wire [9:0] pc_b, n_pc;
     wire [7:0] imm;
     wire pc_sel, b_ok;

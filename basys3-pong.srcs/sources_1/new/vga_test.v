@@ -21,12 +21,13 @@ module vga_test(
     
     reg [7:0] game_state = 1;
     reg [7:0] paddle_1 = 0, paddle_2 = 20;
-    reg [7:0] ball_x = 40, ball_y = 12;
+    reg [7:0] ball_x = 30, ball_y = 22;
     reg [7:0] score_1 = 3, score_2 = 4;
     wire [7:0] keycode;
     
     vga VGA(rgb,hsync,vsync,game_state,paddle_1,paddle_2,ball_x,ball_y,score_1,score_2,clk,nreset);
     keyboard KB(keycode,ps2_clk,ps2_data,clk,nreset);
+    seven_segment SEG(seg,dp,an,keycode,clk);
     
     always @(keycode)
     begin
