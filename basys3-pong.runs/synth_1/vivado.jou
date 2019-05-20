@@ -2,11 +2,11 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Thu Apr 25 14:50:52 2019
-# Process ID: 3753
+# Start of session at: Tue May 21 01:09:39 2019
+# Process ID: 4781
 # Current directory: /home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.runs/synth_1
-# Command line: vivado -log vga_test.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source vga_test.tcl
-# Log file: /home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.runs/synth_1/vga_test.vds
+# Command line: vivado -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+# Log file: /home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.runs/synth_1/top.vds
 # Journal file: /home/natchanon/Desktop/HWLab/basys3-pong/basys3-pong.runs/synth_1/vivado.jou
 #-----------------------------------------------------------
-source vga_test.tcl -notrace
+source top.tcl -notrace

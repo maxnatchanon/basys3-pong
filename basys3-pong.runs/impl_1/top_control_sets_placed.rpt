@@ -1,0 +1,99 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Tue May 21 01:12:24 2019
+| Host         : natchanon-MacBookPro running 64-bit Ubuntu 16.04.6 LTS
+| Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
+| Design       : top
+| Device       : xc7a35t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    29 |
+| Unused register locations in slices containing registers |   174 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      1 |           22 |
+|      2 |            1 |
+|      4 |            1 |
+|      5 |            1 |
+|      8 |            1 |
+|      9 |            1 |
+|    16+ |            2 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              37 |           27 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |              36 |           13 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |               9 |            2 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-------------------------------------+---------------------------------------+---------------------------------+------------------+----------------+
+|             Clock Signal            |             Enable Signal             |         Set/Reset Signal        | Slice Load Count | Bel Load Count |
++-------------------------------------+---------------------------------------+---------------------------------+------------------+----------------+
+|  MEM_IO/genblk1[13].c1/outClk_reg_0 |                                       |                                 |                1 |              1 |
+|  MEM_IO/genblk1[9].c1/outClk_reg_0  |                                       |                                 |                1 |              1 |
+|  clk_IBUF_BUFG                      | MEM_IO/KB/db_data/O_i_1__0_n_0        |                                 |                1 |              1 |
+|  clk_IBUF_BUFG                      | MEM_IO/KB/db_data/Iv_i_1__0_n_0       |                                 |                1 |              1 |
+|  clk_IBUF_BUFG                      | MEM_IO/KB/db_clk/clear                |                                 |                1 |              1 |
+|  clk_IBUF_BUFG                      | MEM_IO/KB/db_clk/O_i_1_n_0            |                                 |                1 |              1 |
+|  MEM_IO/genblk1[2].c1/outClk_reg_0  |                                       |                                 |                1 |              1 |
+|  MEM_IO/genblk1[10].c1/outClk_reg_0 |                                       |                                 |                1 |              1 |
+|  MEM_IO/genblk1[3].c1/outClk_reg_0  |                                       |                                 |                1 |              1 |
+|  MEM_IO/genblk1[0].c1/outClk_reg_0  |                                       |                                 |                1 |              1 |
+|  MEM_IO/genblk1[8].c1/outClk_reg_0  |                                       |                                 |                1 |              1 |
+|  MEM_IO/genblk1[6].c1/outClk_reg_0  |                                       |                                 |                1 |              1 |
+|  MEM_IO/genblk1[11].c1/outClk_reg_0 |                                       |                                 |                1 |              1 |
+|  MEM_IO/genblk1[1].c1/outClk_reg_0  |                                       |                                 |                1 |              1 |
+|  MEM_IO/genblk1[17].c1/outClk_reg_0 |                                       |                                 |                1 |              1 |
+|  MEM_IO/genblk1[16].c1/outClk_reg_0 |                                       |                                 |                1 |              1 |
+|  MEM_IO/genblk1[15].c1/outClk_reg_0 |                                       |                                 |                1 |              1 |
+|  MEM_IO/genblk1[14].c1/outClk_reg_0 |                                       |                                 |                1 |              1 |
+|  MEM_IO/genblk1[5].c1/outClk_reg_0  |                                       |                                 |                1 |              1 |
+|  MEM_IO/genblk1[4].c1/outClk_reg_0  |                                       |                                 |                1 |              1 |
+|  MEM_IO/genblk1[7].c1/outClk_reg_0  |                                       |                                 |                1 |              1 |
+|  MEM_IO/genblk1[12].c1/outClk_reg_0 |                                       |                                 |                1 |              1 |
+|  MEM_IO/c2/CLK                      |                                       |                                 |                1 |              2 |
+| ~MEM_IO/KB/db_clk/O_reg_0           | MEM_IO/KB/cnt                         | MEM_IO/KB/cnt[3]_i_1_n_0        |                1 |              4 |
+|  clk_IBUF_BUFG                      | MEM_IO/KB/db_data/count[4]_i_1__0_n_0 | MEM_IO/KB/db_data/Iv_i_1__0_n_0 |                1 |              5 |
+|  clk_IBUF_BUFG                      |                                       |                                 |                5 |              8 |
+| ~MEM_IO/KB/db_clk/O_reg_0           |                                       |                                 |                3 |              9 |
+|  clk_IBUF_BUFG                      | MEM_IO/KB/E[0]                        |                                 |                4 |             16 |
+|  clk_IBUF_BUFG                      | MEM_IO/KB/oflag_i_1_n_0               |                                 |                5 |             16 |
++-------------------------------------+---------------------------------------+---------------------------------+------------------+----------------+
+
+

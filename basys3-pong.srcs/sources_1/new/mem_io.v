@@ -42,10 +42,7 @@ module mem_io(
     // Drive LED signal
     assign led[0] = (mem[10'h000] == 0);
     assign led[1] = (mem[10'h000] == 1);
-
-    // 7-segment display
-    seven_segment SEVEN_SEG(seg,an,dp,{mem[10'h3fe],mem[10'h3ff]},clk);
-
+    
     // Keyboard
     wire [15:0] tkeycode; 
     wire flag;

@@ -12,7 +12,7 @@ module top(
     output wire [11:0] rgb,            // VGA color
     output wire hsync,                 // H-sync signal
     output wire vsync,                 // V-sync sugnal
-    output wire [1:0] led,                   // LED signal
+    output wire [1:0] led,             // LED signal
     input wire ps2_data,               // Keyboard data
     input wire ps2_clk,                // Keyboard clock
     input wire clk,                    // Clock
@@ -21,7 +21,7 @@ module top(
 
     // Instruction fetch
     reg [9:0] pc = 0;
-    reg [9:0] pc_new;
+    wire [9:0] pc_new;
     wire [9:0] pc_b, n_pc;
     wire [7:0] imm;
     wire pc_sel, b_ok;
