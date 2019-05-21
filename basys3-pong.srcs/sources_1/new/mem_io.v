@@ -48,6 +48,9 @@ module mem_io(
     wire flag;
     ps2_receiver KB(tkeycode,flag,clk,ps2_clk,ps2_data);
     keycode_converter KEY_CONV(keycode,tkeycode,flag,clk,nreset);
+    
+    // VGA
+    vga VGA(hsync,vsync,mem[0],mem[1],mem[2],mem[10'h011],mem[10'h012],mem[10'h103],mem[10'h104],clk,nreset);
 
     // 7-segment display
     // seven_segment SEVEN_SEG(seg,an,dp,keycode,clk);

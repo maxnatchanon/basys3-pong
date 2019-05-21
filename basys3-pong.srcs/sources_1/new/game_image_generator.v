@@ -16,7 +16,8 @@ module game_image_generator(
 	input wire [2:0] score_2,
     input wire animate,
     input wire [9:0] x,
-    input wire [8:0] y
+    input wire [8:0] y,
+    input wire video_on
     );
 
     // Score position - row:[44:56] col:[17:23]&[56:62]
@@ -24,33 +25,33 @@ module game_image_generator(
     // Player position - col:[3]&[79]
 
     reg [79:0] game_area [59:0];
-    reg [2:0] c_score_1 = 7, c_score_2 = 7;
-    reg [4:0] c_paddle_1 = 31, c_paddle_2 = 31;
-    reg [6:0] c_ball_x = 0;
-    reg [4:0] c_ball_y = 0;
     wire [90:0] score_pixel_1;
     wire [90:0] score_pixel_2;
     integer i;
 
     initial
     begin
-        // $readmemb("gameTemplate.mem",game_area);
-        game_area[3][54:25]  = 25'b111111001111110010000100111111;
-        game_area[4][54:25]  = 25'b100001001000010011000100100000;
-        game_area[5][54:25]  = 25'b100001001000010011000100100000;
-        game_area[6][54:25]  = 25'b100001001000010010100100100000;
-        game_area[7][54:25]  = 25'b111111001000010010010100100111;
-        game_area[8][54:25]  = 25'b100000001000010010010100100001;
-        game_area[9][54:25]  = 25'b100000001000010010001100100001;
-        game_area[10][54:25] = 25'b100000001000010010001100100001;
-        game_area[11][54:25] = 25'b100000001111110010000100111111;
+        for (i=0; i<60; i=i+1)
+        begin
+            game_area[i] = 80'h0;
+        end
+        
+        game_area[3]  = 80'h7e7e427e000000;
+        game_area[4]  = 80'h42426240000000;
+        game_area[5]  = 80'h42426240000000;
+        game_area[6]  = 80'h42425240000000;
+        game_area[7]  = 80'h7e424a4e000000;
+        game_area[8]  = 80'h40424a42000000;
+        game_area[9]  = 80'h40424642000000;
+        game_area[10] = 80'h40424642000000;
+        game_area[11] = 80'h407e427e000000;
         game_area[14] = 80'hffffffffffffffffffff;
         game_area[40] = 80'hffffffffffffffffffff;
-        game_area[19][40:39] = 2'b11;
-        game_area[23][40:39] = 2'b11;
-        game_area[27][40:39] = 2'b11;
-        game_area[31][40:39] = 2'b11;
-        game_area[35][40:39] = 2'b11;
+        game_area[19] = 80'h18000000000;
+        game_area[23] = 80'h18000000000;
+        game_area[27] = 80'h18000000000;
+        game_area[31] = 80'h18000000000;
+        game_area[35] = 80'h18000000000;    
     end
 
     number_generator NUM1(score_pixel_1,score_1);
@@ -58,10 +59,10 @@ module game_image_generator(
 
     // Pixel flags
     wire on_paddle_1, on_paddle_2, on_template, on_ball, on_score_1, on_score_2;
-    assign on_paddle_1 = ((639-x)/8 == 76) & ((c_paddle_1 <= (y/8)-15) & (c_paddle_1+5 > (y/8)-15));
-    assign on_paddle_2 = ((639-x)/8 == 3) & ((c_paddle_2 <= (y/8)-15) & (c_paddle_2+5 > (y/8)-15));
+    assign on_paddle_1 = ((639-x)/8 == 76) & ((paddle_1 <= (y/8)-15) & (paddle_1+5 > (y/8)-15));
+    assign on_paddle_2 = ((639-x)/8 == 3) & ((paddle_2 <= (y/8)-15) & (paddle_2+5 > (y/8)-15));
     assign on_template = game_area[y/8][(639-x)/8];
-    assign on_ball = ((639-x)/8 == c_ball_x & y/8 == c_ball_y+15);
+    assign on_ball = ((639-x)/8 == ball_x & y/8 == ball_y+15);
     assign on_score_1 = ((639-x)/8 >= 56 & (639-x)/8 < 63) & (y/8 >= 44 & y/8 < 57) & score_pixel_1[(7*((y/8)-44)+((639-x)/8)-56)];
     assign on_score_2 = ((639-x)/8 >= 17 & (639-x)/8 < 24) & (y/8 >= 44 & y/8 < 57) & score_pixel_2[(7*((y/8)-44)+((639-x)/8)-17)];
 
